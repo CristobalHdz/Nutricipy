@@ -33,7 +33,8 @@ function getRecipesByCalorie(userInput) {
 
 	// Calculate max calorie intake. Use data to filter food
  	$.ajax(settings).then(function (response) {
-		 getRecipes(userInput, response.calorie);	
+		 getRecipes(userInput, response.calorie);
+		 console.log(response)// these are the calories for user display these in page
 	});
 }
 
