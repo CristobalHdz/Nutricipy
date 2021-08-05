@@ -4,6 +4,7 @@ var searchInputBar = $('input[name = "input"]');
 
 $("#submit").on("click", function () {
   console.log("button clicked");
+  recipeDiv.innerHTML = "";
   $("input:checkbox[name=filters]:checked").each(function () {
     arrayOfFilters.push("&health=" + $(this).val().toLowerCase());
     console.log(arrayOfFilters); //console log
@@ -13,7 +14,6 @@ $("#submit").on("click", function () {
   console.log(localStorage.getItem("searchInput")); //console log
   console.log(arrayOfFilters.join(""));
   getRecipesByCalorie(userInput); //calling the first function
-  
 });
 var searchInput = localStorage.getItem("searchInput");
 
@@ -74,10 +74,7 @@ function getRecipesByCalorie(userInput) {
 
 function getFoodUrl(userInput) {
   const params =
-    "search?q=" +
-    userInput.search +
-    "&from=0&to=100" +
-    arrayOfFilters.join("");
+    "search?q=" + userInput.search + "&from=0&to=17" + arrayOfFilters.join("");
   //&health=alcohol-free"
   const url = "https://edamam-recipe-search.p.rapidapi.com/" + params;
 
@@ -107,9 +104,12 @@ function getRecipes(userInput, calorie) {
 // Filter recipes according to user input
 function processRecipes(recipes, calorie) {
   for (let i = 0; i < recipes.length; i++) {
-    if (recipes[i].recipe.calories < calorie) console.log(recipes[i]);
-    showRecipes(recipes); //call the showRecipes function
+    if (recipes[i].recipe.calories < calorie) {
+      console.log(recipes[i]);
+      console.log(recipes.length);
+    }
   }
+  showRecipes(recipes); //call the showRecipes function
 }
 
 //my stuff
@@ -118,6 +118,7 @@ var recipeDiv = $("#recipeDiv");
 
 function showRecipes(recipes) {
   for (var i = 0; i < recipes.length; i++) {
+    console.log(recipes.length);
     console.log(recipes[i]);
     //console.log(recipes[0].recipe.label)
 
