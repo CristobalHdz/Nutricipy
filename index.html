@@ -5,12 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Nutricipy</title>
 </head>
 
 <body>
-    <h1>Hello world</h1>
+    <section class="row title center-align">
+        <div class=" titleChild col s6 m6 offset-s3 offset-m3 teal white-text">
+            <h1>Nutricipy</h1>
+        </div>
+        <div class="titleChild col s4 m4 offset-s4 offset-m4 teal white-text">
+            <h3>Recipe Finder</h3>
+        </div>
+    </section>
+
+    <section class="options center-align row">
+        <div class="col s8 m8 offset-s2 offset-m2">
+            <p>This application works based on your Body Mass Index(BMI). This is calculated usting your body weight and
+                your height, which ,when calculated, will give you a list of reciped based on the index. You can later
+                add or remove ingredients based on personal preferences or by the allergies you might have</p>
+        </div>
+        <div class="col s8 m8 offset-s2 offset-m2">
+            <label for="weightInput">Enter you current weight</label>
+            <input id="weightInput" type="number" />
+        </div>
+    </section>
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./assets/js/script.js"></script>

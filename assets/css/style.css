@@ -1,0 +1,12 @@
+.title {
+    background-color: blue;
+    height:400px;
+}
+
+.titleChild {
+    margin-top: 50px;
+}
+
+p{
+    font-weight: bold;
+}
