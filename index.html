@@ -2,18 +2,36 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Nutricipy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nutricipy</title>
 </head>
 
-<body>
-    <h1>Hello world</h1>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="./assets/js/script.js"></script>
-</body>
+<aside>
+  <h2>Calculated BMI</h2>
+    <p id="B"></p>
+    <p>Suggested calorie intake per meal</p>
 
+  <h2>Recipe Filter</h2>
+  <input type="checkbox" id="vegan" name="vegan" value="vegan">
+  <label for="vegan"> Vegan</label><br>
+  <input type="checkbox" id="vegetarian" name="vegetarian" value="vegetarian">
+  <label for="vegetarian"> Vegetarian</label><br>
+  <input type="checkbox" id="gluten-Free" name="gluten-Free" value="gluten-Free">
+  <label for="gluten-Free"> Gluten-Free</label><br><br>
+  <input type="submit" value="Submit">
+  <input type="checkbox" id="sugar-Free" name="sugar-Free" value="sugar-Free">
+  <label for="sugar-Free"> Sugar-Free</label><br>
+  <input type="checkbox" id="vegetarian" name="vegetarian" value="vegetarian">
+  <label for="vegetarian"> Vegetarian</label><br>
+  <input type="checkbox" id="gluten-Free" name="gluten-Free" value="gluten-Free">
+  <label for="gluten-Free"> Gluten-Free</label><br><br>
+  <input type="submit" value="Submit">
+</aside>
+
+<body>
+  <script src= "script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
 </html>
