@@ -16,35 +16,42 @@
      <p>Suggested calorie intake per meal</p>
     </div>
 
-    <div>
+    <div id = "filters">
+      
       <h3>Recipe Filter</h2>
-         <input type="checkbox" id="vegan" name="vegan" value="vegan">
+         <input type="checkbox" id="vegan" name="filters" value="vegan">
          <label for="vegan"> Vegan</label><br>
-         <input type="checkbox" id="vegetarian" name="vegetarian" value="vegetarian">
+         <input type="checkbox" id="vegetarian" name="filters" value="vegetarian">
          <label for="vegetarian"> Vegetarian</label><br>
-         <input type="checkbox" id="gluten-Free" name="gluten-Free" value="gluten-Free">
+         <input type="checkbox" id="gluten-Free" name="filters" value="gluten-Free">
          <label for="gluten-Free"> Gluten-Free</label><br>
-         <input type="checkbox" id="sugar-Free" name="sugar-Free" value="sugar-Free">
+         <input type="checkbox" id="sugar-Free" name="filters" value="sugar-Free">
          <label for="sugar-Free"> Sugar-Free</label><br>
-         <input type="checkbox" id="dairy-Free" name="dairy-Free" value="dairy-Free">
+         <input type="checkbox" id="dairy-Free" name="filters" value="dairy-Free">
       <label for="vegetarian"> Dairy-Free</label><br>
-      <input type="checkbox" id="egg-Free" name="egg-Free" value="egg-Free">
+      <input type="checkbox" id="egg-Free" name="filters" value="egg-Free">
       <label for="egg-Free"> Egg-Free</label><br>
-      <input type="checkbox" id="Keto" name="keto" value="keto">
-      <label for="keto"> keto</label><br><br>
+      <input type="checkbox" id="keto" name="filters" value="keto">
+      <label for="keto"> Keto</label><br><br>
+      <input type="text" name="input" id="search-bar"> <br><br>
       <input type="submit"id="submit" name="S" value="Search for recipes">
     </div>
+  
   </aside>
 
   <div>
    <h3>Recipes with selected filters and recommended calorie sum</h2>
     <!-- Add dynamically recipes -->
+    <div id = "recipeDiv">
+
+    </div>
   </div>
 
  </body>
 
-  <script src= "script.js"></script>
+ 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src= "assets/js/script.js"></script>
 
 </html>

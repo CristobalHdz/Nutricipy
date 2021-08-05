@@ -1,3 +1,8 @@
+
+
+
+
+
 // ***** MANAGE API CALL TO FITNESS API TO GET CALORIE INTAKE FOR USER *****
 
 // Get the API url for calorie intake
