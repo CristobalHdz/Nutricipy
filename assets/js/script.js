@@ -1,4 +1,3 @@
-
 var arrayOfFilters = [];
 
 var searchInputBar = $('input[name = "input"]');
@@ -6,12 +5,15 @@ var searchInputBar = $('input[name = "input"]');
 $("#submit").on("click", function () {
   console.log("button clicked");
   $("input:checkbox[name=filters]:checked").each(function () {
-    arrayOfFilters.push($(this).val());
+    arrayOfFilters.push("&health=" + $(this).val().toLowerCase());
     console.log(arrayOfFilters); //console log
   });
+  console.log(arrayOfFilters);
   localStorage.setItem("searchInput", searchInputBar.val());
   console.log(localStorage.getItem("searchInput")); //console log
+  console.log(arrayOfFilters.join(""));
   getRecipesByCalorie(userInput); //calling the first function
+  
 });
 var searchInput = localStorage.getItem("searchInput");
 
@@ -71,7 +73,11 @@ function getRecipesByCalorie(userInput) {
 // ***** MANAGE API CALL TO FOOD API TO GET RECIPES *****
 
 function getFoodUrl(userInput) {
-  const params = "search?q=" + userInput.search + "&from=0&to=100";
+  const params =
+    "search?q=" +
+    userInput.search +
+    "&from=0&to=100" +
+    arrayOfFilters.join("");
   //&health=alcohol-free"
   const url = "https://edamam-recipe-search.p.rapidapi.com/" + params;
 
