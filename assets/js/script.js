@@ -9,8 +9,9 @@ for (var i = 0; i < arrayTest.length; i++){
    recipeName.text("Recipe Name")
 
    var recipeLink = $("<a>")
-   recipeLink.text("Link")
-   recipeLink.href = "www.amazon.com"
+   recipeLink.attr("href","http://www.google.com")
+   recipeLink.attr("target","_blank")
+   recipeLink.text("link")
 
    //currently just do body
    test.append(div)
