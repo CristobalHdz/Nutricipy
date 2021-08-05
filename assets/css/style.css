@@ -1,6 +1,24 @@
+*{
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+  }
+
 .title {
     background-color: blue;
     height:400px;
+}
+
+h1 {
+    @media only screen 
+    and (min-device-width: 375px) 
+     and (max-device-width: 812px) 
+    and (-webkit-min-device-pixel-ratio: 3) { 
+      font-size: 15px
+}
 }
 
 .titleChild {
@@ -9,4 +27,77 @@
 
 p{
     font-weight: bold;
+}
+
+label {
+    font-size: 20px;
+    color:black;
+}
+
+input{
+    margin-top: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+button{
+    margin-top: 50px;
+}
+
+/* RADIO SLIDER */
+.radioBtns{
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+  display: inline-flex;
+  height: 100px;
+  width: 400px;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+ .option{
+  height: 100%;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2{
+  border-color: #0069d9;
+  background: #0069d9;
+}
+
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 20px;
+  color: #808080;
+}
+
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span{
+  color: #fff;
 }
