@@ -1,0 +1,32 @@
+::placeholder {
+    font-style: italic;
+    font-size: 1em;
+    color: black;
+    padding: 5px;
+  }
+
+  aside{
+      height: 1000px;
+      position: fixed;
+      border-radius: 10px;
+  }
+
+  h3{
+      font-size: x-large;
+      padding: 20px;
+      margin: 0%;
+      border-radius: 10px;
+  }
+
+  #bmi-Category, #calories{
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+
+ .recipes{
+     width: 100%;
+ }
+
+ .submit{
+    border-radius: 5px;
+ }
