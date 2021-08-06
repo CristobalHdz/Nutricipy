@@ -21,40 +21,65 @@
     </section>
 
     <section class="row">
-        <div class="col s10 m8 offset-s1 offset-m2 center-align">
-            <p>This application works based on your Body Mass Index(BMI). This is calculated usting your body weight and
-                your height, which ,when calculated, will give you a list of reciped based on the index. You can later
+        <div class="col s10 m8 l8 offset-s1 offset-m2 offset-l2 center-align">
+            <p>This application works based on your Body Mass Index(BMI). This is calculated usting your body weight,
+                your height, age and sex; which ,when calculated, will give you a list of reciped based on the index. You can later
                 add or remove ingredients based on personal preferences or by the allergies you might have</p>
         </div>
-        <div class="col s10 m2 offset-s1 offset-m5 center-align">
-            <label for="weightInput">Enter you current height</label>
-            <input id="weightInput" type="number" id="wightInput" />
-        </div>
-        <div class="col s10 m2 offset-s1 offset-m5 center-align">
-            <label for="weightInput">Enter you current weight</label>
-            <input id="weightInput" type="number"  id="wightInput" />
-        </div>
 
-        <div class="switch col s12 m6 offset-s0 offset-m3 center-align">
+        <form class="switch col s12 m8 l12 offset-s0 offset-m2 center-align" id="measure">
+            <label class="col s12 m8 l12 offset-s0 offset-m2 center-align">Select the measure units:</label>
             <div class="wrapper">
-                <input type="radio" name="select" id="option-1" checked>
-                <input type="radio" name="select" id="option-2">
-                <label for="option-1" class="option option-1">
-                    <div class="dot"></div>
+                <input type="radio" name="measure" id="metric" value="metric" checked>
+                <input type="radio" name="measure" id="imperial" value="imperial">
+                <label for="metric" class="option metric">
                     <span>Kg/Meters</span>
                 </label>
-                <label for="option-2" class="option option-2">
-                    <div class="dot"></div>
+                <label for="imperial" class="option imperial">
                     <span>Lb/Feet</span>
                 </label>
             </div>
+        </form>
+
+        <div class="col s10 m6 offset-s1 offset-m3 center-align">
+            <label for="weightInput">Enter your current height</label>
+            <input id="weightInput" type="number" id="heightInput" />
+        </div>
+        <div class="col s10 m6 offset-s1 offset-m3 center-align">
+            <label for="weightInput">Enter your current weight</label>
+            <input id="weightInput" type="number" id="weightInput" />
+        </div>
+        <div class="col s10 m6 offset-s1 offset-m3 center-align">
+            <label for="weightInput">Enter your current age</label>
+            <input id="weightInput" type="number" id="ageInput" />
         </div>
 
+        <form class=" col s12 m8 l12 offset-s0 offset-m2 center-align" id="gender">
+            <label class="col s12 m8 l12 offset-s0 offset-m2 center-align">Please select your gender:</label>
+            <div class="wrapper">
+                <input type="radio" name="measure" id="female" value="metric" checked>
+                <input type="radio" name="measure" id="male" value="imperial">
+                <label for="female" class="option female">
+                    <img src="assets/FemaleImg.png" alt="Female icon" />
+                    <span>Female</span>
+                </label>
+                <label for="male" class="option male">
+                    <img src="assets/MaleImg.png" alt="Male icon" />
+                    <span>Male</span>
+                </label>
+            </div>
+        </form>
+
+        
+        
+
         </div>
-        <button class="col s8 m4 offset-s3 offset-m4 waves-effect waves-light btn-large" id="calculateBtn">Calculate BMI</button>
+        <button class="col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn-large" id="calculateBtn">Calculate
+            BMI</button>
     </section>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./assets/js/api.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
 
