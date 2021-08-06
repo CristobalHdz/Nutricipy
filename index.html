@@ -21,9 +21,9 @@
     </section>
 
     <section class="row">
-        <div class="col s10 m8 l10 offset-s1 offset-m2 offset-l1 center-align">
-            <p>This application works based on your Body Mass Index(BMI). This is calculated usting your body weight and
-                your height, which ,when calculated, will give you a list of reciped based on the index. You can later
+        <div class="col s10 m8 l8 offset-s1 offset-m2 offset-l2 center-align">
+            <p>This application works based on your Body Mass Index(BMI). This is calculated usting your body weight,
+                your height, age and sex; which ,when calculated, will give you a list of reciped based on the index. You can later
                 add or remove ingredients based on personal preferences or by the allergies you might have</p>
         </div>
         <div class="col s10 m6 offset-s1 offset-m3 center-align">
@@ -40,21 +40,24 @@
         </div>
 
         <form class=" col s12 m8 l12 offset-s0 offset-m2 center-align" id="gender">
+            <label class="col s12 m8 l12 offset-s0 offset-m2 center-align">Please enter you gender:</label>
             <div class="wrapper">
                 <input type="radio" name="measure" id="female" value="metric" checked>
                 <input type="radio" name="measure" id="male" value="imperial">
                 <label for="female" class="option female">
-                    <div></div>
+                    <img src="assets/FemaleImg.png" alt="Female icon" />
                     <span>Female</span>
                 </label>
                 <label for="male" class="option male">
-                    <div></div>
+                    <img src="assets/MaleImg.png" alt="Male icon" />
                     <span>Male</span>
                 </label>
             </div>
         </form>
 
+        
         <form class="switch col s12 m8 l12 offset-s0 offset-m2 center-align" id="measure">
+            <label class="col s12 m8 l12 offset-s0 offset-m2 center-align">Select the measure unit you want:</label>
             <div class="wrapper">
                 <input type="radio" name="measure" id="metric" value="metric" checked>
                 <input type="radio" name="measure" id="imperial" value="imperial">

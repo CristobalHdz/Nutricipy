@@ -23,6 +23,7 @@ label {
 
 input{
     margin-top: 20px;
+    text-align: center;
 }
 
 input::-webkit-outer-spin-button,
@@ -39,6 +40,10 @@ button{
     margin-top: 50px;
 }
 
+img{
+  width:25px;
+}
+
 /* RADIO SLIDER */
 .radioBtns{
   margin: 0;
@@ -52,7 +57,7 @@ button{
   justify-content: space-evenly;
   border-radius: 5px;
   padding: 15px;
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
  .option{
