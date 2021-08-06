@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Nutricipy</title>
+  </head>
+
+ <body>
+  <aside>
+
+   <div>
+    <h2 id=>Calculated BMI</h2>
+     <p id="bmi-Category"></p>
+     <p>Suggested calorie intake per meal</p>
+    </div>
+
+    <div id = "filters">
+      
+      <h3>Recipe Filter</h2>
+         <input type="checkbox" id="vegan" name="filters" value="Vegan">
+         <label for="vegan"> Vegan</label><br>
+         <input type="checkbox" id="vegetarian" name="filters" value="Vegetarian">
+         <label for="vegetarian"> Vegetarian</label><br>
+         <input type="checkbox" id="gluten-Free" name="filters" value="Gluten">
+         <label for="gluten-Free"> Gluten-Free</label><br>
+         <input type="checkbox" id="sugar-Free" name="filters" value="Sugar-Conscious">
+         <label for="sugar-Free"> Sugar-Conscious</label><br>
+         <input type="checkbox" id="alcohol-Free" name="filters" value="Alcohol-Free">
+      <label for="vegetarian"> Alcohol-Free</label><br>
+      <input type="checkbox" id="egg-Free" name="filters" value="Eggs">
+      <label for="egg-Free"> Egg-Free</label><br>
+      <input type="checkbox" id="keto" name="filters" value="Peanut-Free">
+      <label for="keto"> Peanut-Free</label><br><br>
+      <input type="text" name="input" id="search-bar"> <br><br>
+      <input type="submit"id="submit" name="S" value="Search for recipes">
+    </div>
+  
+  </aside>
+
+  <div>
+   <h3>Recipes with selected filters and recommended calorie sum</h2>
+    <!-- Add dynamically recipes -->
+    <div id = "recipeDiv">
+
+    </div>
+  </div>
+
+ </body>
+
+ 
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src= "assets/js/script.js"></script>
+
+</html>
