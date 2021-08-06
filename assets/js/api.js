@@ -1,8 +1,4 @@
 
-
-
-
-
 // ***** MANAGE API CALL TO FITNESS API TO GET CALORIE INTAKE FOR USER *****
 
 // Get the API url for calorie intake
@@ -96,6 +92,7 @@ let userInput = {
 };
 
 // Start the API Call to retrieve all recipies filtered by calories
+
 getRecipesByCalorie(userInput);
 
 
