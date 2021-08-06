@@ -12,7 +12,7 @@
  <body>
 
   <div class= "row">
-  <aside class="col s green lighten-3 ">
+  <aside class="col green lighten-3 ">
 
    <div class="center-align">
     <h2 id=>Calculated BMI</h2><br>
@@ -21,39 +21,40 @@
      <p id="calories">300</p>
     </div>
 
-    <div >
+    <div id="filters" >
       <h3 class="center-align" >Recipe Filter</h2>
 
         <label class="black-text">
-          <input type="radio" class="with-gap " id="vegan" name="vegan" value="vegan">
+          <input type="checkbox" id="vegan" name="filters" value="Vegan">
           <span for="vegan"> Vegan</span><br>
         </label>
         <label class="black-text">
-          <input type="radio" class="with-gap"id="vegetarian" name="vegetarian" value="vegetarian">
+          <input type="checkbox" id="vegetarian" name="filters" value="Vegetarian">
           <span for="vegetarian"> Vegetarian</span><br>
         </label>
          <label class="black-text">
-          <input type="radio" class="with-gap" id="gluten-Free" name="gluten-Free" value="gluten-Free">
+          <input type="checkbox" id="gluten-Free" name="filters" value="Gluten">
           <span for="gluten-Free"> Gluten-Free</span><br>
          </label>
          <label class="black-text">
-          <input type="radio" class="with-gap" id="sugar-Free" name="sugar-Free" value="sugar-Free">
-          <span for="sugar-Free"> Sugar-Free</span><br>
+          <input type="checkbox" id="Sugar-Conscious" name="filters" value="Sugar-Conscious">
+          <span for="Sugar-Conscious"> Sugar-Conscious</span><br>
          </label>
          <label class="black-text">
-          <input type="radio" class="with-gap" id="dairy-Free" name="dairy-Free" value="dairy-Free">
-          <span for="vegetarian"> Dairy-Free</span><br>
+          <input type="checkbox"  id="alcohol-Free" name="filters" value="Alcohol-Free">
+          <span for="alcohol-Free"> Alcohol-Free</span><br>
          </label>
          <label class="black-text">
-          <input type="radio" class="with-gap" id="egg-Free" name="egg-Free" value="egg-Free">
+          <input type="checkbox" id="egg-Free" name="filters" value="Eggs">
           <span for="egg-Free"> Egg-Free</span><br>
          </label>
          <label class="black-text">
-          <input type="radio" class="with-gap" id="Keto" name="keto" value="keto">
-          <span for="keto"> keto</span><br>
+          <input type="checkbox" id="Peanut-Free" name="filters" value="Peanut-Free">
+          <span for="Peanut-Free"> Peanut-Free</span><br>
          </label>
+        
          
-         <input type="text"  id="search" name="search" placeholder="e.g Chicken"><br><br>
+         <input type="text"  id="search-bar" name="input" placeholder="e.g Chicken"><br><br>
          <div class="center-align">
          <input  class=" black-text submit" type="submit"id="submit" name="S" value="Search for recipes">
         </div>
