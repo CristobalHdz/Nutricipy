@@ -3,19 +3,23 @@ var arrayOfFilters = [];
 var searchInputBar = $('input[name = "input"]');
 
 $("#submit").on("click", function () {
+  recipeDiv.html("");
+  arrayOfFilters = [];
   console.log("button clicked");
-  recipeDiv.innerHTML = "";
   $("input:checkbox[name=filters]:checked").each(function () {
-    arrayOfFilters.push("&health=" + $(this).val().toLowerCase());
+    //  arrayOfFilters.push("&health=" + $(this).val().toLowerCase());
+    arrayOfFilters.push($(this).val());
     console.log(arrayOfFilters); //console log
   });
+
   console.log(arrayOfFilters);
   localStorage.setItem("searchInput", searchInputBar.val());
   console.log(localStorage.getItem("searchInput")); //console log
-  console.log(arrayOfFilters.join(""));
+  //console.log(arrayOfFilters.join(""));
+  userInput.search = localStorage.getItem("searchInput");
+  console.log(userInput);
   getRecipesByCalorie(userInput); //calling the first function
 });
-var searchInput = localStorage.getItem("searchInput");
 
 // ***** RETRIEVE DATA ACCORDING TO USER'S NEEDS *****
 
@@ -25,7 +29,7 @@ let userInput = {
   gender: "male",
   height: 180,
   weight: 70,
-  search: searchInput,
+  search: "",
 };
 
 // Start the API Call to retrieve all recipies filtered by calories
@@ -65,7 +69,7 @@ function getRecipesByCalorie(userInput) {
 
   // Calculate max calorie intake. Use data to filter food
   $.ajax(settings).then(function (response) {
-    getRecipes(userInput, response.calorie); //3 meals
+    getRecipes(userInput, response.calorie / 3); //3 meals
     console.log(response.calorie); // these are the calories for user display these in page
   });
 }
@@ -73,9 +77,8 @@ function getRecipesByCalorie(userInput) {
 // ***** MANAGE API CALL TO FOOD API TO GET RECIPES *****
 
 function getFoodUrl(userInput) {
-  const params =
-    "search?q=" + userInput.search + "&from=0&to=17" + arrayOfFilters.join("");
-  //&health=alcohol-free"
+  const params = "search?q=" + userInput.search + "&from=0&to=100";
+  //&health=alcohol-free" + arrayOfFilters.join("")
   const url = "https://edamam-recipe-search.p.rapidapi.com/" + params;
 
   return url;
@@ -103,13 +106,32 @@ function getRecipes(userInput, calorie) {
 
 // Filter recipes according to user input
 function processRecipes(recipes, calorie) {
+  var vaildRecipes = [];
+  console.log("max allowed " + calorie);
+
   for (let i = 0; i < recipes.length; i++) {
-    if (recipes[i].recipe.calories < calorie) {
-      console.log(recipes[i]);
-      console.log(recipes.length);
+    //console.log(recipes[i])
+    var vaild = true;
+
+    for (let j = 0; j < arrayOfFilters.length; j++) {
+      console.log(arrayOfFilters[j]);
+      if (
+        !Object.values(recipes[i].recipe.healthLabels).includes(
+          arrayOfFilters[j]
+        )
+      ) {
+        vaild = false;
+      }
+    }
+    if (recipes[i].recipe.calories > calorie) {
+      vaild = false;
+    }
+    console.log(vaild);
+    if (vaild) {
+      vaildRecipes.push(recipes[i]);
     }
   }
-  showRecipes(recipes); //call the showRecipes function
+  showRecipes(vaildRecipes); //call the showRecipes function
 }
 
 //my stuff
@@ -135,10 +157,50 @@ function showRecipes(recipes) {
     recipeLink.attr("target", "_blank");
     recipeLink.text("Link" + recipes[i].recipe.url);
 
+    var img = $("<img>");
+    img.attr("src", recipes[i].recipe.image);
+    // img.text(recipes[i].recipe.image);
+
     //append them
     recipeDiv.append(div);
     div.append(recipeName);
     div.append(calories);
     div.append(recipeLink);
+    div.append(img);
   }
 }
+
+//function clearBox (recipeDiv){
+//    while(div.firstChild)
+//}
+
+/*
+function processRecipes(recipes, calorie) {
+  var vaildRecipes = [];
+
+  for (let i = 0; i < recipes.length; i++) {
+    //console.log(recipes[i])
+    var vaild = true;
+
+    for (let j = 0; j < arrayOfFilters.length; j++) {
+        console.log(arrayOfFilters[j])
+      if (
+        !Object.values(recipes[i].recipe.healthLabels).includes(
+          arrayOfFilters[j]
+        )
+      ) {
+        vaild = false;
+      }
+      if (recipes[i].recipe.calories < calorie) {
+        vaild = false;
+      }
+    }
+    console.log(vaild)
+    if (vaild) {
+        console.log("vaild")
+      vaildRecipes.push(recipes[i]);
+    }
+  }
+  showRecipes(vaildRecipes); //call the showRecipes function
+}
+*/
