@@ -5,19 +5,13 @@ body {
 
 .title {
   /* background-image: url("/assets/pic1.jpg") ; */
-  background-image: url("assets/pic2.jpg");
-  height: 400px;
-
-  background-image: url("http://www.birds.com/wp-content/uploads/home/bird4.jpg"); /* The image used */
-  background-image: url("/assets/pic2.jpg");
-  background-image: url("/Users/karenvillagomez/Project-1/Nutricipy/assets/pic1.jpg");
+  background-image: url("../../assets/backgroundPic.jpg");
   background-color: #cccccc; /* Used if the image is unavailable */
   height: 500px;
   background-position: center;
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover;
 }
-
 
 .titleChild {
   margin-top: 50px;
@@ -100,7 +94,7 @@ img {
 #female:checked:checked ~ .female,
 #male:checked:checked ~ .male {
   border-color: #aed581;
-  background: #aed581
+  background: #aed581;
 }
 
 #metric:checked:checked ~ .metric,
