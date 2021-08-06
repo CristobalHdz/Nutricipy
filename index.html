@@ -26,6 +26,21 @@
                 your height, age and sex; which ,when calculated, will give you a list of reciped based on the index. You can later
                 add or remove ingredients based on personal preferences or by the allergies you might have</p>
         </div>
+
+        <form class="switch col s12 m8 l12 offset-s0 offset-m2 center-align" id="measure">
+            <label class="col s12 m8 l12 offset-s0 offset-m2 center-align">Select the measure units:</label>
+            <div class="wrapper">
+                <input type="radio" name="measure" id="metric" value="metric" checked>
+                <input type="radio" name="measure" id="imperial" value="imperial">
+                <label for="metric" class="option metric">
+                    <span>Kg/Meters</span>
+                </label>
+                <label for="imperial" class="option imperial">
+                    <span>Lb/Feet</span>
+                </label>
+            </div>
+        </form>
+
         <div class="col s10 m6 offset-s1 offset-m3 center-align">
             <label for="weightInput">Enter your current height</label>
             <input id="weightInput" type="number" id="heightInput" />
@@ -40,7 +55,7 @@
         </div>
 
         <form class=" col s12 m8 l12 offset-s0 offset-m2 center-align" id="gender">
-            <label class="col s12 m8 l12 offset-s0 offset-m2 center-align">Please enter you gender:</label>
+            <label class="col s12 m8 l12 offset-s0 offset-m2 center-align">Please select your gender:</label>
             <div class="wrapper">
                 <input type="radio" name="measure" id="female" value="metric" checked>
                 <input type="radio" name="measure" id="male" value="imperial">
@@ -56,19 +71,7 @@
         </form>
 
         
-        <form class="switch col s12 m8 l12 offset-s0 offset-m2 center-align" id="measure">
-            <label class="col s12 m8 l12 offset-s0 offset-m2 center-align">Select the measure unit you want:</label>
-            <div class="wrapper">
-                <input type="radio" name="measure" id="metric" value="metric" checked>
-                <input type="radio" name="measure" id="imperial" value="imperial">
-                <label for="metric" class="option metric">
-                    <span>Kg/Meters</span>
-                </label>
-                <label for="imperial" class="option imperial">
-                    <span>Lb/Feet</span>
-                </label>
-            </div>
-        </form>
+        
 
         </div>
         <button class="col s8 m4 offset-s2 offset-m4 waves-effect waves-light btn-large" id="calculateBtn">Calculate
