@@ -8,15 +8,6 @@ body{
     height:400px;
 }
 
-h1 {
-    @media only screen 
-    and (min-device-width: 375px) 
-     and (max-device-width: 812px) 
-    and (-webkit-min-device-pixel-ratio: 3) { 
-      font-size: 15px
-}
-}
-
 .titleChild {
     margin-top: 50px;
 }
@@ -77,14 +68,28 @@ button{
   transition: all 0.3s ease;
 }
 
-#option-1:checked:checked ~ .option-1,
-#option-2:checked:checked ~ .option-2{
+@media screen and (max-width: 425px) {
+  .option {
+    width:100px;
+    margin: 0;
+  }
+  .wrapper {
+    width: 300px;
+  }
+}
+
+#metric:checked:checked ~ .metric,
+#imperial:checked:checked ~ .imperial,
+#female:checked:checked ~ .female,
+#male:checked:checked ~ .male{
   border-color: #0069d9;
   background: #0069d9;
 }
 
-#option-1:checked:checked ~ .option-1 .dot::before,
-#option-2:checked:checked ~ .option-2 .dot::before{
+#metric:checked:checked ~ .metric ,
+#imperial:checked:checked ~ .imperial,
+#female:checked:checked ~ .female,
+#male:checked:checked ~ .male {
   opacity: 1;
   transform: scale(1);
 }
@@ -93,7 +98,9 @@ button{
   color: #808080;
 }
 
-#option-1:checked:checked ~ .option-1 span,
-#option-2:checked:checked ~ .option-2 span{
+#metric:checked:checked ~ .metric span,
+#imperial:checked:checked ~ .imperial span,
+#female:checked:checked ~ .female span,
+#male:checked:checked ~ .male span{
   color: #fff;
 }
