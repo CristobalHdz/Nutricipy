@@ -5,7 +5,7 @@ body {
 
 .title {
   /* background-image: url("/assets/pic1.jpg") ; */
-  background-image: url("../../assets/backgroundPic.jpg");
+  background-image: url("../images/backgroundPic.jpg");
   background-color: #cccccc; /* Used if the image is unavailable */
   height: 500px;
   background-position: center;
