@@ -1,79 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-   <link rel="stylesheet" href="./css/secondStyle.css">
-   <title>Nutricipy</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./css/secondStyle.css">
+  <title>Nutricipy</title>
+</head>
 
- <body>
+<body>
 
-  <div class= "row">
-  <aside class="col s3 green lighten-3 ">
+  <div class="row">
+    <aside class="col s3 green lighten-3 ">
 
-   <div class="center-align">
-    <h2 id=>Calculated BMI</h2><br>
-     <p id="bmi-Category">Overweight</p><br>
-     <p>Suggested calorie intake per meal</p>
-     <p id="calories">300</p>
-    </div>
-
-      <div id="filters" >
-       <h3 class="center-align" >Recipe Filter</h2>
-
-        <label class="black-text">
-          <input type="checkbox" id="vegan" name="filters" value="Vegan">
-          <span for="vegan"> Vegan</span><br>
-        </label>
-        <label class="black-text">
-          <input type="checkbox" id="vegetarian" name="filters" value="Vegetarian">
-          <span for="vegetarian"> Vegetarian</span><br>
-        </label>
-         <label class="black-text">
-          <input type="checkbox" id="gluten-Free" name="filters" value="Gluten">
-          <span for="gluten-Free"> Gluten-Free</span><br>
-         </label>
-         <label class="black-text">
-          <input type="checkbox" id="Sugar-Conscious" name="filters" value="Sugar-Conscious">
-          <span for="Sugar-Conscious"> Sugar-Conscious</span><br>
-         </label>
-         <label class="black-text">
-          <input type="checkbox"  id="alcohol-Free" name="filters" value="Alcohol-Free">
-          <span for="alcohol-Free"> Alcohol-Free</span><br>
-         </label>
-         <label class="black-text">
-          <input type="checkbox" id="egg-Free" name="filters" value="Eggs">
-          <span for="egg-Free"> Egg-Free</span><br>
-         </label>
-         <label class="black-text">
-          <input type="checkbox" id="Peanut-Free" name="filters" value="Peanut-Free">
-          <span for="Peanut-Free"> Peanut-Free</span><br>
-         </label>
-         <input type="text"  id="search-bar" name="input" placeholder="e.g Chicken"><br><br>
-         <div class="center-align">
-           <input  class=" black-text submit" type="submit"id="submit" name="S" value="Search for recipes">
+      <div class="center-align">
+        <h2 id=>Calculated BMI</h2><br>
+        <p id="bmi-Category">Overweight</p><br>
+        <p>Suggested calorie intake per meal</p>
+        <p id="calories">300</p>
       </div>
-    </div>
-   </div>
+
+      <div id="filters">
+        <h3 class="center-align">Recipe Filter</h2>
+
+          <label class="black-text">
+            <input type="checkbox" id="vegan" name="filters" value="Vegan">
+            <span for="vegan"> Vegan</span><br>
+          </label>
+          <label class="black-text">
+            <input type="checkbox" id="vegetarian" name="filters" value="Vegetarian">
+            <span for="vegetarian"> Vegetarian</span><br>
+          </label>
+          <label class="black-text">
+            <input type="checkbox" id="gluten-Free" name="filters" value="Gluten">
+            <span for="gluten-Free"> Gluten-Free</span><br>
+          </label>
+          <label class="black-text">
+            <input type="checkbox" id="Sugar-Conscious" name="filters" value="Sugar-Conscious">
+            <span for="Sugar-Conscious"> Sugar-Conscious</span><br>
+          </label>
+          <label class="black-text">
+            <input type="checkbox" id="alcohol-Free" name="filters" value="Alcohol-Free">
+            <span for="alcohol-Free"> Alcohol-Free</span><br>
+          </label>
+          <label class="black-text">
+            <input type="checkbox" id="egg-Free" name="filters" value="Eggs">
+            <span for="egg-Free"> Egg-Free</span><br>
+          </label>
+          <label class="black-text">
+            <input type="checkbox" id="Peanut-Free" name="filters" value="Peanut-Free">
+            <span for="Peanut-Free"> Peanut-Free</span><br>
+          </label>
+          <input type="text" id="search-bar" name="input" placeholder="e.g Chicken"><br><br>
+          <div class="center-align">
+            <input class=" black-text submit" type="submit" id="submit" name="S" value="Search for recipes">
+          </div>
+      </div>
+  </div>
 
   </aside>
 
   <div class="  col s9 center-align recipes">
-   <h3 class="green lighten-5 ">Recipes with selected filters and recommended calorie sum</h2>
-    <!-- Add dynamically recipes -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h3 class="green lighten-5 ">Recipes with selected filters and recommended calorie sum</h2>
+      <!-- Add dynamically recipes -->
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div>
 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="js/script.js"></script>
+  <script src="./js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</div>
+  </div>
 
- </body>
+</body>
 
 
 
