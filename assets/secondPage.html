@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/secondStyle.css">
+    <title>Nutricipy</title>
+</head>
+
+<body>
+
+    <div class="row">
+        <aside class="col s green lighten-3 ">
+
+            <div class="center-align">
+                <h2 id=>Calculated BMI</h2><br>
+                <p id="bmi-Category">Overweight</p><br>
+                <p>Suggested calorie intake per meal</p>
+                <p id="calories">300</p>
+            </div>
+
+            <div>
+                <h3 class="center-align">Recipe Filter</h2>
+
+                    <label class="black-text">
+                        <input type="radio" class="with-gap " id="vegan" name="vegan" value="vegan">
+                        <span for="vegan"> Vegan</span><br>
+                    </label>
+                    <label class="black-text">
+                        <input type="radio" class="with-gap" id="vegetarian" name="vegetarian" value="vegetarian">
+                        <span for="vegetarian"> Vegetarian</span><br>
+                    </label>
+                    <label class="black-text">
+                        <input type="radio" class="with-gap" id="gluten-Free" name="gluten-Free" value="gluten-Free">
+                        <span for="gluten-Free"> Gluten-Free</span><br>
+                    </label>
+                    <label class="black-text">
+                        <input type="radio" class="with-gap" id="sugar-Free" name="sugar-Free" value="sugar-Free">
+                        <span for="sugar-Free"> Sugar-Free</span><br>
+                    </label>
+                    <label class="black-text">
+                        <input type="radio" class="with-gap" id="dairy-Free" name="dairy-Free" value="dairy-Free">
+                        <span for="vegetarian"> Dairy-Free</span><br>
+                    </label>
+                    <label class="black-text">
+                        <input type="radio" class="with-gap" id="egg-Free" name="egg-Free" value="egg-Free">
+                        <span for="egg-Free"> Egg-Free</span><br>
+                    </label>
+                    <label class="black-text">
+                        <input type="radio" class="with-gap" id="Keto" name="keto" value="keto">
+                        <span for="keto"> keto</span><br>
+                    </label>
+
+                    <input type="text" id="search" name="search" placeholder="e.g Chicken"><br><br>
+                    <div class="center-align">
+                        <input class=" black-text submit" type="submit" id="submit" name="S" value="Search for recipes">
+                    </div>
+            </div>
+
+        </aside>
+
+        <div class="  col  center-align recipes">
+            <h3 class="green lighten-5 ">Recipes with selected filters and recommended calorie sum</h2>
+                <!-- Add dynamically recipes -->
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="./js/script.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </div>
+
+</body>
+
+
+
+</html>
