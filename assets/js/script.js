@@ -1,18 +1,26 @@
 var arrayOfFilters = [];
+var arrayOfCautions = [];
 
 var searchInputBar = $('input[name = "input"]');
 
 $("#submit").on("click", function () {
   recipeDiv.html("");
   arrayOfFilters = [];
+  arrayOfCautions = [];
   console.log("button clicked");
   $("input:checkbox[name=filters]:checked").each(function () {
     //  arrayOfFilters.push("&health=" + $(this).val().toLowerCase());
     arrayOfFilters.push($(this).val());
-    console.log(arrayOfFilters); //console log
   });
 
+  $("input:checkbox[name=caution]:checked").each(function () {
+    //  arrayOfFilters.push("&health=" + $(this).val().toLowerCase());
+    arrayOfCautions.push($(this).val());
+  });
+
+
   console.log(arrayOfFilters);
+  console.log(arrayOfCautions);
   localStorage.setItem("searchInput", searchInputBar.val());
   console.log(localStorage.getItem("searchInput")); //console log
   //console.log(arrayOfFilters.join(""));
@@ -69,7 +77,10 @@ function getRecipesByCalorie(userInput) {
 
   // Calculate max calorie intake. Use data to filter food
   $.ajax(settings).then(function (response) {
-    getRecipes(userInput, response.calorie / 3); //3 meals
+    // REMINDER: I DELETED THE DIVISION FOR TESTING PURPOSES 
+    // ********************
+    // ********************
+    getRecipes(userInput, response.calorie); //3 meals
     console.log(response.calorie); // these are the calories for user display these in page
   });
 }
@@ -106,13 +117,13 @@ function getRecipes(userInput, calorie) {
 
 // Filter recipes according to user input
 function processRecipes(recipes, calorie) {
-  var vaildRecipes = [];
+  var validRecipes = [];
   console.log("max allowed " + calorie);
 
   for (let i = 0; i < recipes.length; i++) {
-    //console.log(recipes[i])
-    var vaild = true;
+    var valid = true;
 
+    // Check if recipe has appropriate health labels
     for (let j = 0; j < arrayOfFilters.length; j++) {
       console.log(arrayOfFilters[j]);
       if (
@@ -120,18 +131,30 @@ function processRecipes(recipes, calorie) {
           arrayOfFilters[j]
         )
       ) {
-        vaild = false;
+        valid = false;
       }
     }
-    if (recipes[i].recipe.calories > calorie) {
-      vaild = false;
+
+    // Check if recipe doesn't have caution ingredients
+    for(let j = 0; j < arrayOfCautions.length; j++) {
+      if(
+        Object.values(recipes[i].recipe.cautions).includes(arrayOfCautions[j])
+      ) {
+        valid = false;
+      }
     }
-    console.log(vaild);
-    if (vaild) {
-      vaildRecipes.push(recipes[i]);
+
+    // Check if recipe does not exceed calorie limit
+    if (recipes[i].recipe.calories > calorie) {
+      valid = false;
+    }
+
+    if (valid) {
+      validRecipes.push(recipes[i]);
     }
   }
-  showRecipes(vaildRecipes); //call the showRecipes function
+
+  showRecipes(validRecipes); //call the showRecipes function
 }
 
 //my stuff
