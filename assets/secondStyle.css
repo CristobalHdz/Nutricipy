@@ -5,17 +5,29 @@
     padding: 5px;
   }
 
+  body{
+    background-image: url("picture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+
+
   aside{
-      height: 1000px;
-      position: fixed;
-      border-radius: 10px;
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    border-radius: 5px;
+    flex: 30%;
+    
   }
 
   h3{
       font-size: x-large;
-      padding: 20px;
-      margin: 0%;
+      padding: 30px;
       border-radius: 10px;
+      margin-left: 18%;
+      margin-right: 2%;
   }
 
   #bmi-Category, #calories{
@@ -24,9 +36,22 @@
   }
 
  .recipes{
-     width: 100%;
+    margin-left: 160px; 
  }
 
  .submit{
     border-radius: 5px;
  }
+
+ @media screen and (max-width: 992px) {
+    aside h2 {
+      width:30%;
+      display: flex;
+      flex-wrap: wrap;
+      display: inherit;
+      font-size: 200%;
+    }
+    .recipes{
+        margin-left:20%;;
+    }
+  }
