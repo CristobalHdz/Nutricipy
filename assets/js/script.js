@@ -2,12 +2,14 @@ var arrayOfFilters = [];
 var arrayOfCautions = [];
 var otherHtml = "./secondPage.html";
 
+
 var calculateBtn = $("#calculateBtn");
 var searchInputBar = $('input[name = "input"]');
 var heightInput = $("#heightInput");
 var weightInput = $("#weightInput");
 var ageInput = $("#ageInput");
 var genderInput = $("#genderDiv");
+
 
 heightInput.val(localStorage.getItem("height"));
 weightInput.val(localStorage.getItem("weight"));
@@ -49,7 +51,6 @@ function updateUserInfo() {
   userInput.gender = localStorage.getItem("gender");
   console.log(userInput.gender);
 }
-
 $("#submit").on("click", function () {
   updateUserInfo();
   console.log(userInput);
@@ -132,7 +133,9 @@ function getRecipesByCalorie(userInput) {
     console.log(response); // these are the calories for user display these in page
     getRecipes(userInput, response.calorie / 3); //3 meals
   });
+  
 }
+
 
 // ***** MANAGE API CALL TO FOOD API TO GET RECIPES *****
 
@@ -168,6 +171,7 @@ function getRecipes(userInput, calorie) {
 function processRecipes(recipes, calorie) {
   var validRecipes = [];
   console.log("max allowed " + calorie);
+ 
 
   for (let i = 0; i < recipes.length; i++) {
     var valid = true;
@@ -206,7 +210,7 @@ function processRecipes(recipes, calorie) {
   showRecipes(validRecipes); //call the showRecipes function
 }
 
-//my stuff
+
 
 var recipeDiv = $("#recipeDiv");
 
