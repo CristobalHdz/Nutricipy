@@ -33,25 +33,36 @@
             <span for="vegetarian"> Vegetarian</span><br>
           </label>
           <label class="black-text">
-            <input type="checkbox" id="gluten-Free" name="filters" value="Gluten">
-            <span for="gluten-Free"> Gluten-Free</span><br>
+            <input type="checkbox" id="sugar-concious" name="filters" value="Sugar-Conscious">
+            <span for="sugar-concious"> Sugar-Conscious</span><br>
           </label>
           <label class="black-text">
-            <input type="checkbox" id="Sugar-Conscious" name="filters" value="Sugar-Conscious">
-            <span for="Sugar-Conscious"> Sugar-Conscious</span><br>
+            <input type="checkbox" id="alcohol-free" name="filters" value="Alcohol-Free">
+            <span for="alcohol-free"> Alcohol-Free</span><br>
           </label>
           <label class="black-text">
-            <input type="checkbox" id="alcohol-Free" name="filters" value="Alcohol-Free">
-            <span for="alcohol-Free"> Alcohol-Free</span><br>
+            <input type="checkbox" id="peanut-free" name="filters" value="Peanut-Free">
+            <span for="peanut-free"> Peanut-Free</span><br>
+          </label>
+
+          <label class="black-text">
+            <input type="checkbox" id="gluten-free" name="caution" value="Gluten">
+            <span for="gluten-free"> Gluten-Free</span><br>
           </label>
           <label class="black-text">
-            <input type="checkbox" id="egg-Free" name="filters" value="Eggs">
-            <span for="egg-Free"> Egg-Free</span><br>
+            <input type="checkbox" id="egg-free" name="caution" value="Eggs">
+            <span for="egg-free"> Egg-Free</span><br>
           </label>
           <label class="black-text">
-            <input type="checkbox" id="Peanut-Free" name="filters" value="Peanut-Free">
-            <span for="Peanut-Free"> Peanut-Free</span><br>
+            <input type="checkbox" id="milk-free" name="caution" value="Milk">
+            <span for="milk-free"> Milk-Free</span><br>
           </label>
+          <label class="black-text">
+            <input type="checkbox" id="sulfites-free" name="caution" value="Sulfites">
+            <span for="sulfites-free"> Sulfites-Free</span><br>
+          </label>
+
+
           <input type="text" id="search-bar" name="input" placeholder="e.g Chicken"><br><br>
           <div class="center-align">
             <input class=" black-text submit" type="submit" id="submit" name="S" value="Search for recipes">
@@ -61,10 +72,13 @@
 
   </aside>
 
-  <div class="  col s9 center-align recipes">
-    <h3 class="green lighten-5 ">Recipes with selected filters and recommended calorie sum</h2>
-      <!-- Add dynamically recipes -->
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="col s9 center-align recipes">
+    <h3 class="green lighten-5 ">Recipes with selected filters and recommended calorie sum</h3>
+
+    <div id="recipeDiv">
+    <!-- Add dynamically recipes -->
+    </div>
+
   </div>
 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>

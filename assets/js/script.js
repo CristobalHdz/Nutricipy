@@ -18,7 +18,6 @@ $("#submit").on("click", function () {
     arrayOfCautions.push($(this).val());
   });
 
-
   console.log(arrayOfFilters);
   console.log(arrayOfCautions);
   localStorage.setItem("searchInput", searchInputBar.val());
