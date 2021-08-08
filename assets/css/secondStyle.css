@@ -54,3 +54,14 @@
         margin-left:20%;;
     }
   }
+  .overWeight{
+    background-color: red;
+
+  }
+  .underWeight{
+    background-color: darkkhaki;
+
+  }
+  .normalWeight{
+ background-color: greenyellow;
+  }
