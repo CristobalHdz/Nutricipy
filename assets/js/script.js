@@ -91,7 +91,7 @@ let userInput = {
   weight: 0,
   search: "",
 };
-
+//to calculate bmi 
 function calculateBMI() {
   var weight = userInput.weight;
   
