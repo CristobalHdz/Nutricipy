@@ -1,8 +1,7 @@
-var cal = 0;
-
 var arrayOfFilters = [];
 var arrayOfCautions = [];
 var otherHtml = "./secondPage.html";
+
 
 var calculateBtn = $("#calculateBtn");
 var searchInputBar = $('input[name = "input"]');
@@ -10,7 +9,7 @@ var heightInput = $("#heightInput");
 var weightInput = $("#weightInput");
 var ageInput = $("#ageInput");
 var genderInput = $("#genderDiv");
-var calculatedBmi = $("#bmi-Category")
+
 
 heightInput.val(localStorage.getItem("height"));
 weightInput.val(localStorage.getItem("weight"));
@@ -52,7 +51,6 @@ function updateUserInfo() {
   userInput.gender = localStorage.getItem("gender");
   console.log(userInput.gender);
 }
-
 $("#submit").on("click", function () {
   updateUserInfo();
   console.log(userInput);
@@ -77,8 +75,7 @@ $("#submit").on("click", function () {
   //console.log(arrayOfFilters.join(""));
   userInput.search = localStorage.getItem("searchInput");
   console.log(userInput);
-  //getRecipesByCalorie(userInput); //calling the first function
-  getRecipes(userInput, cal); //3 meals
+  getRecipesByCalorie(userInput); //calling the first function
 });
 
 // ***** RETRIEVE DATA ACCORDING TO USER'S NEEDS *****
@@ -92,36 +89,8 @@ let userInput = {
   search: "",
 };
 
-function calculateBMI() {
-  var weight = userInput.weight;
-  
-  console.log("userINput " + weight);
-
-  var height = userInput.height;
-  
-  let bmi = (weight / ((height * height) / 10000)).toFixed(2);
-  console.log(bmi)
-
-  if (bmi < 18.6) {
-    console.log("underweight")
-    calculatedBmi.text("Underweight")
-    calculatedBmi.addClass("underWeight")
-  }
-  else if (bmi >= 18.6 && bmi < 24.9){
-    console.log("normal")
-    calculatedBmi.text("Normal")
-    calculatedBmi.addClass("normalWeight")
-  }else {
-    console.log("overweight")
-    calculatedBmi.text("Overweight")
-    calculatedBmi.addClass("overWeight")
-  };
-}
-
 // Start the API Call to retrieve all recipies filtered by calories
-updateUserInfo();
-getRecipesByCalorie(userInput);
-calculateBMI();
+//getRecipesByCalorie(userInput);
 
 // ***** MANAGE API CALL TO FITNESS API TO GET CALORIE INTAKE FOR USER *****
 
@@ -162,12 +131,11 @@ function getRecipesByCalorie(userInput) {
     // ********************
     // ********************
     console.log(response); // these are the calories for user display these in page
-    $("#calories").text(Math.round(response.calorie / 3));
-
-    // getRecipes(userInput, response.calorie / 3); //3 meals
-    cal = response.calorie / 3;
+    getRecipes(userInput, response.calorie / 3); //3 meals
   });
+  
 }
+
 
 // ***** MANAGE API CALL TO FOOD API TO GET RECIPES *****
 
@@ -203,6 +171,7 @@ function getRecipes(userInput, calorie) {
 function processRecipes(recipes, calorie) {
   var validRecipes = [];
   console.log("max allowed " + calorie);
+ 
 
   for (let i = 0; i < recipes.length; i++) {
     var valid = true;
@@ -241,7 +210,7 @@ function processRecipes(recipes, calorie) {
   showRecipes(validRecipes); //call the showRecipes function
 }
 
-//my stuff
+
 
 var recipeDiv = $("#recipeDiv");
 
