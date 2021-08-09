@@ -23,6 +23,11 @@
     font-weight: bold;
   }
 
+  #foodInput input {
+    font-style: italic;
+
+  }
+
   @media screen and (max-width: 425px) {
     #calculatedBoxes {
       font-size: 30px;
@@ -75,12 +80,17 @@
    }
   }
 
-  @media screen and (min-width: 769px) {
-    menu{
-      margin-bottom: 100%;
+  @media screen and (min-width: 993px) {
+    #menu{
+      padding-bottom: 220px;
+      position:absolute;
+      width:400px;
     }
     #filtersParent{
       margin-bottom: 30px;
+    }
+    #recipesDisplayer .card-panel{
+      margin-left: 400px;
     }
     #foodInput input{
       font-size: 30px;
