@@ -4,6 +4,7 @@
     color: black;
   }
 
+ 
   body{
     background-image: url("../images/ScndBackgroundpic.jpg");
     background-repeat: no-repeat;
@@ -17,13 +18,13 @@
 
   @media screen and (max-width: 425px) {
     #calculatedBoxes {
-      font-size: 20px;
+      font-size: 30px;
     }
     #filtersParent span  {
-      font-size: 20px;
+      font-size: 30px;
     }
     #filtersParent {
-      line-height: 50px;
+      line-height: 57px;
     }
     #search-bar{
       font-size:30px;
@@ -35,10 +36,11 @@
       margin-top:30px;
       margin-bottom:30px;
       height:50px;
+      font-size: 60px;
    }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and(max-width: 768px) {
     #calculatedBoxes {
       font-size: 30px;
     }

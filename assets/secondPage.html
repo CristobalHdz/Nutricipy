@@ -12,91 +12,92 @@
 <body>
 
   <div class="row">
-    <aside class="col s12 m12 green lighten-3">
+    <aside class="col s12 green lighten-3">
 
       <div class="col s10 offset-s1 center-align" id="calculatedBoxes">
-        <h2 id=><b>Calculated BMI</b></h2>
+        <h3 id=><b>Calculated BMI</b></h3>
         <p id="bmi-Category">Overweight</p>
         <p>Suggested calorie intake per meal:</p>
         <p id="calories">300</p>
       </div>
 
       <div id="filters">
-        <h3 class="col s11 m12 center-align">Recipe Filter</h2>
+        <h3 class="col s12 center-align">Recipe Filter</h3>
 
-          <div id="filtersParent" class="col s9 m12 offset-s2 offset-m4">
-            <div class="black-text filterChild">
-              <input type="checkbox" id="vegan" name="filters" value="Vegan">
-              <span for="vegan"> Vegan</span>
-            </div>
-
-            <div class="black-text filterChild">
-              <input type="checkbox" id="vegetarian" name="filters" value="Vegetarian">
-              <span for="vegetarian"> Vegetarian</span>
-            </div>
-
-            <div class="black-text filterChild">
-              <input type="checkbox" id="sugar-concious" name="filters" value="Sugar-Conscious">
-              <span for="sugar-concious"> Sugar-Conscious</span>
-            </div>
-
-            <div class="black-text filterChild">
-              <input type="checkbox" id="alcohol-free" name="filters" value="Alcohol-Free">
-              <span for="alcohol-free"> Alcohol-Free</span>
-            </div>
-
-            <div class="black-text filterChild">
-              <input type="checkbox" id="peanut-free" name="filters" value="Peanut-Free">
-              <span for="peanut-free"> Peanut-Free</span>
-            </div>
-
-            <div class="black-text filterChild">
-              <input type="checkbox" id="gluten-free" name="caution" value="Gluten">
-              <span for="gluten-free"> Gluten-Free</span>
-            </div>
-
-            <div class="black-text filterChild">
-              <input type="checkbox" id="egg-free" name="caution" value="Eggs">
-              <span for="egg-free"> Egg-Free</span>
-            </div>
-
-            <div class="black-text filterChild">
-              <input type="checkbox" id="milk-free" name="caution" value="Milk">
-              <span for="milk-free"> Milk-Free</span>
-            </div>
-
-            <div class="black-text filterChild">
-              <input type="checkbox" id="sulfites-free" name="caution" value="Sulfites">
-              <span for="sulfites-free"> Sulfites-Free</span>
-            </div>
+        <div id="filtersParent" class="col s10 offset-s1">
+          <div class="black-text filterChild">
+            <input type="checkbox" id="vegan" name="filters" value="Vegan">
+            <span for="vegan"> Vegan</span>
           </div>
 
-
-          <input class="col s10 m8 offset-m2" type="text" id="search-bar" name="input" placeholder="e.g Chicken">
-          <div class="center-align">
-            <button class="col s10 m10 center-align waves-effect light-green darken-3 btn-large" type="submit" id="submit"
-              name="S">
-              Search for recipes
-            </button>
+          <div class="black-text filterChild">
+            <input type="checkbox" id="vegetarian" name="filters" value="Vegetarian">
+            <span for="vegetarian"> Vegetarian</span>
           </div>
-      </div>
-  </div>
-  </aside>
 
-  <div class="col s9 center-align recipes">
-    <h3 class="card-panel lighten-2">Recipes with selected filters and recommended calorie sum</h3>
+          <div class="black-text filterChild">
+            <input type="checkbox" id="sugar-concious" name="filters" value="Sugar-Conscious">
+            <span for="sugar-concious"> Sugar-Conscious</span>
+          </div>
 
-    <div id="recipeDiv">
-      <!-- Add dynamically recipes -->
+          <div class="black-text filterChild">
+            <input type="checkbox" id="alcohol-free" name="filters" value="Alcohol-Free">
+            <span for="alcohol-free"> Alcohol-Free</span>
+          </div>
+
+          <div class="black-text filterChild">
+            <input type="checkbox" id="peanut-free" name="filters" value="Peanut-Free">
+            <span for="peanut-free"> Peanut-Free</span>
+          </div>
+
+          <div class="black-text filterChild">
+            <input type="checkbox" id="gluten-free" name="caution" value="Gluten">
+            <span for="gluten-free"> Gluten-Free</span>
+          </div>
+
+          <div class="black-text filterChild">
+            <input type="checkbox" id="egg-free" name="caution" value="Eggs">
+            <span for="egg-free"> Egg-Free</span>
+          </div>
+
+          <div class="black-text filterChild">
+            <input type="checkbox" id="milk-free" name="caution" value="Milk">
+            <span for="milk-free"> Milk-Free</span>
+          </div>
+
+          <div class="black-text filterChild">
+            <input type="checkbox" id="sulfites-free" name="caution" value="Sulfites">
+            <span for="sulfites-free"> Sulfites-Free</span>
+          </div>
+        </div>
+
+
+        <input class="col s10 offset-s1" type="text" id="search-bar" name="input" placeholder="e.g Chicken">
+        <div class="center-align">
+          <button class="col s12 center-align waves-effect light-green darken-3 btn-large" type="submit" id="submit"
+            name="S">
+            Search for recipes
+          </button>
+
+        </div>
+    </aside>
+
+    <div class="col s8">
+      <h3 class="card-panel lighten-2">Recipes with selected filters and recommended calorie sum</h4>
+
+        <div id="recipeDiv">
+          <!-- "Add dynamically recipes -->
+        </div>
+
     </div>
-
   </div>
+
+
 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="./js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </div>
 
 </body>
 
