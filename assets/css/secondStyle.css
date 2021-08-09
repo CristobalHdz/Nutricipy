@@ -4,7 +4,6 @@
     color: black;
   }
 
- 
   body{
     background-image: url("../images/ScndBackgroundpic.jpg");
     background-repeat: no-repeat;
@@ -16,11 +15,19 @@
     border-radius: 5px;
   }
 
+  #filtersParent{
+    border: 2px black;
+  }
+
+  #filters h3{
+    font-weight: bold;
+  }
+
   @media screen and (max-width: 425px) {
     #calculatedBoxes {
       font-size: 30px;
     }
-    #filtersParent span  {
+    #filtersParent label span  {
       font-size: 30px;
     }
     #filtersParent {
@@ -40,21 +47,26 @@
    }
   }
 
-  @media screen and(max-width: 768px) {
+  @media screen and (min-width: 426px) and (max-width: 768px) {
     #calculatedBoxes {
       font-size: 30px;
+      margin-top:10px;
+      margin-bottom: 10px;
     }
-    #filtersParent span  {
+    #filtersParent label span  {
       font-size: 40px;
     }
     #filtersParent {
       line-height: 65px;
     }
+    #filters h3{
+      margin-bottom: 40px;
+    }
     #search-bar{
       font-size:30px;
       height:35px;
-      margin-top:30px;
-      margin-bottom:30px;
+      margin-top:20px;
+      margin-bottom:10px;
     }
     button{
       margin-top:30px;
