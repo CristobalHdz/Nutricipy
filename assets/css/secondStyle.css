@@ -16,44 +16,15 @@
     height: 100%;
     width: 160px;
     position: fixed;
-    border-radius: 5px;
+    border-right:solid ;
     flex: 30%;
     
   }
-
-  h3{
-      font-size: x-large;
-      padding: 30px;
-      border-radius: 10px;
-      margin-left: 18%;
-      margin-right: 2%;
-  }
-
-  #bmi-Category, #calories{
-    border: 1px solid black;
-    border-radius: 5px;
-  }
-
- .recipes{
-    margin-left: 160px; 
- }
 
  .submit{
     border-radius: 5px;
  }
 
- @media screen and (max-width: 992px) {
-    aside h2 {
-      width:30%;
-      display: flex;
-      flex-wrap: wrap;
-      display: inherit;
-      font-size: 200%;
-    }
-    .recipes{
-        margin-left:20%;;
-    }
-  }
   .overWeight{
     background-color: red;
 
@@ -64,4 +35,47 @@
   }
   .normalWeight{
  background-color: greenyellow;
+  }
+  #bmi-box{
+   /* background-color: ;*/
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: solid;
+  }
+  #bmi-Category{
+    /* background-color: ;*/
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 2px solid;
+  }
+  #bmi-text{
+    font-size: 18px;
+  }
+  #calories{
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid;
+    margin: 10px auto;
+    width: 30%;
+
+   
+  }
+  #cal-box{
+
+  }
+  #recipe-header{
+     /* background-color: ;*/
+     font-size: 18px;
+     font-weight: bold;
+     padding: 5px 10px;
+     border: 2px solid;
+
+  }
+  #gen-recipe-header{
+  width: 280%
+  }
+  #divContainer{
+    background-color: springgreen;
   }
