@@ -12,7 +12,7 @@
 <body>
 
   <div class="row">
-    <aside class="col s12 m12 green lighten-3">
+    <aside id="menu" class="col s12 m12 l3 green lighten-3">
 
       <div class="col s10 offset-s1 center-align" id="calculatedBoxes">
         <h3 id=><b>Calculated BMI</b></h3>
@@ -23,7 +23,7 @@
 
       <div id="filters">
         <h3 class="col s12 center-align">Recipe Filter</h3>
-        <div id="filtersParent" class="col s10 m6 offset-s1 offset-m4">
+        <div id="filtersParent" class="col s10 m6 l5 offset-s1 offset-m4 offset-l3">
 
           <div class="filterChild">
             <label class="black-text"><input type="checkbox" id="alcohol-free" name="filters" value="Alcohol-Free">
@@ -85,10 +85,10 @@
         </div>
 
 
-        <label class="black-text"><input class="col s10 offset-s1" type="text" id="search-bar" name="input"
-            placeholder="e.g Chicken">
+        <label id="foodInput" class="black-text">
+          <input class="col s10 offset-s1" type="text" id="search-bar" name="input" placeholder="e.g Chicken">
           <div class="center-align">
-            <button class="col s12 center-align waves-effect light-green darken-3 btn-large" type="submit" id="submit"
+            <button class="col s12 l7 offset-l2 center-align waves-effect light-green darken-3 btn-large" type="submit" id="submit"
               name="S">
               Search for recipes
             </button>
@@ -96,8 +96,8 @@
           </div>
     </aside>
 
-    <div class="col s12 m12 l2">
-      <h3 class="card-panel lighten-2">Recipes with selected filters and recommended calorie sum</h4>
+    <div class="col s12 m12 l8">
+      <h3 class="card-panel transparent white-text bold">Recipes with selected filters and recommended calorie sum</h4>
 
         <div id="recipeDiv">
           <!-- "Add dynamically recipes -->
