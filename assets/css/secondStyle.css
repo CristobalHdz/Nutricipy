@@ -17,10 +17,10 @@
 
   @media screen and (max-width: 425px) {
     #calculatedBoxes {
-      font-size: 30px;
+      font-size: 20px;
     }
     #filtersParent span  {
-      font-size: 30px;
+      font-size: 20px;
     }
     #filtersParent {
       line-height: 50px;
