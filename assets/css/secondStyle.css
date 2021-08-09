@@ -2,55 +2,61 @@
     font-style: italic;
     font-size: 1em;
     color: black;
-    padding: 5px;
   }
 
   body{
     background-image: url("../images/ScndBackgroundpic.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    
   }
-
-  aside{
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    border-radius: 5px;
-    flex: 30%;
-    
-  }
-
-  h3{
-      font-size: x-large;
-      padding: 30px;
-      border-radius: 10px;
-      margin-left: 18%;
-      margin-right: 2%;
-  }
-
+  
   #bmi-Category, #calories{
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 5px;
   }
 
- .recipes{
-    margin-left: 160px; 
- }
-
- .submit{
-    border-radius: 5px;
- }
-
- @media screen and (max-width: 992px) {
-    aside h2 {
-      width:30%;
-      display: flex;
-      flex-wrap: wrap;
-      display: inherit;
-      font-size: 200%;
+  @media screen and (max-width: 425px) {
+    #calculatedBoxes {
+      font-size: 30px;
     }
-    .recipes{
-        margin-left:20%;;
+    #filtersParent span  {
+      font-size: 30px;
     }
+    #filtersParent {
+      line-height: 50px;
+    }
+    #search-bar{
+      font-size:30px;
+      height:35px;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    button{
+      margin-top:30px;
+      margin-bottom:30px;
+      height:50px;
+   }
+  }
+
+  @media screen and (max-width: 768px) {
+    #calculatedBoxes {
+      font-size: 30px;
+    }
+    #filtersParent span  {
+      font-size: 40px;
+    }
+    #filtersParent {
+      line-height: 65px;
+    }
+    #search-bar{
+      font-size:30px;
+      height:35px;
+      margin-top:30px;
+      margin-bottom:30px;
+    }
+    button{
+      margin-top:30px;
+      margin-bottom:30px;
+      height:50px;
+   }
   }

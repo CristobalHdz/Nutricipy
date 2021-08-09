@@ -6,77 +6,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./css/secondStyle.css">
-  <title>Nutricipy</title>
+  <title>Nutricipy Recipe Search</title>
 </head>
 
 <body>
 
   <div class="row">
-    <aside class="col s3 green lighten-3 ">
+    <aside class="col s12 m12 green lighten-3">
 
-      <div class="center-align">
-        <h2 id=>Calculated BMI</h2><br>
-        <p id="bmi-Category">Overweight</p><br>
-        <p>Suggested calorie intake per meal</p>
+      <div class="col s10 offset-s1 center-align" id="calculatedBoxes">
+        <h2 id=><b>Calculated BMI</b></h2>
+        <p id="bmi-Category">Overweight</p>
+        <p>Suggested calorie intake per meal:</p>
         <p id="calories">300</p>
       </div>
 
       <div id="filters">
-        <h3 class="center-align">Recipe Filter</h2>
+        <h3 class="col s11 m12 center-align">Recipe Filter</h2>
 
-          <label class="black-text">
-            <input type="checkbox" id="vegan" name="filters" value="Vegan">
-            <span for="vegan"> Vegan</span><br>
-          </label>
-          <label class="black-text">
-            <input type="checkbox" id="vegetarian" name="filters" value="Vegetarian">
-            <span for="vegetarian"> Vegetarian</span><br>
-          </label>
-          <label class="black-text">
-            <input type="checkbox" id="sugar-concious" name="filters" value="Sugar-Conscious">
-            <span for="sugar-concious"> Sugar-Conscious</span><br>
-          </label>
-          <label class="black-text">
-            <input type="checkbox" id="alcohol-free" name="filters" value="Alcohol-Free">
-            <span for="alcohol-free"> Alcohol-Free</span><br>
-          </label>
-          <label class="black-text">
-            <input type="checkbox" id="peanut-free" name="filters" value="Peanut-Free">
-            <span for="peanut-free"> Peanut-Free</span><br>
-          </label>
+          <div id="filtersParent" class="col s9 m12 offset-s2 offset-m4">
+            <div class="black-text filterChild">
+              <input type="checkbox" id="vegan" name="filters" value="Vegan">
+              <span for="vegan"> Vegan</span>
+            </div>
 
-          <label class="black-text">
-            <input type="checkbox" id="gluten-free" name="caution" value="Gluten">
-            <span for="gluten-free"> Gluten-Free</span><br>
-          </label>
-          <label class="black-text">
-            <input type="checkbox" id="egg-free" name="caution" value="Eggs">
-            <span for="egg-free"> Egg-Free</span><br>
-          </label>
-          <label class="black-text">
-            <input type="checkbox" id="milk-free" name="caution" value="Milk">
-            <span for="milk-free"> Milk-Free</span><br>
-          </label>
-          <label class="black-text">
-            <input type="checkbox" id="sulfites-free" name="caution" value="Sulfites">
-            <span for="sulfites-free"> Sulfites-Free</span><br>
-          </label>
+            <div class="black-text filterChild">
+              <input type="checkbox" id="vegetarian" name="filters" value="Vegetarian">
+              <span for="vegetarian"> Vegetarian</span>
+            </div>
+
+            <div class="black-text filterChild">
+              <input type="checkbox" id="sugar-concious" name="filters" value="Sugar-Conscious">
+              <span for="sugar-concious"> Sugar-Conscious</span>
+            </div>
+
+            <div class="black-text filterChild">
+              <input type="checkbox" id="alcohol-free" name="filters" value="Alcohol-Free">
+              <span for="alcohol-free"> Alcohol-Free</span>
+            </div>
+
+            <div class="black-text filterChild">
+              <input type="checkbox" id="peanut-free" name="filters" value="Peanut-Free">
+              <span for="peanut-free"> Peanut-Free</span>
+            </div>
+
+            <div class="black-text filterChild">
+              <input type="checkbox" id="gluten-free" name="caution" value="Gluten">
+              <span for="gluten-free"> Gluten-Free</span>
+            </div>
+
+            <div class="black-text filterChild">
+              <input type="checkbox" id="egg-free" name="caution" value="Eggs">
+              <span for="egg-free"> Egg-Free</span>
+            </div>
+
+            <div class="black-text filterChild">
+              <input type="checkbox" id="milk-free" name="caution" value="Milk">
+              <span for="milk-free"> Milk-Free</span>
+            </div>
+
+            <div class="black-text filterChild">
+              <input type="checkbox" id="sulfites-free" name="caution" value="Sulfites">
+              <span for="sulfites-free"> Sulfites-Free</span>
+            </div>
+          </div>
 
 
-          <input type="text" id="search-bar" name="input" placeholder="e.g Chicken"><br><br>
+          <input class="col s10 m8 offset-m2" type="text" id="search-bar" name="input" placeholder="e.g Chicken">
           <div class="center-align">
-            <input class=" black-text submit" type="submit" id="submit" name="S" value="Search for recipes">
+            <button class="col s10 m10 center-align waves-effect light-green darken-3 btn-large" type="submit" id="submit"
+              name="S">
+              Search for recipes
+            </button>
           </div>
       </div>
   </div>
-
   </aside>
 
   <div class="col s9 center-align recipes">
-    <h3 class="green lighten-5 ">Recipes with selected filters and recommended calorie sum</h3>
+    <h3 class="card-panel lighten-2">Recipes with selected filters and recommended calorie sum</h3>
 
     <div id="recipeDiv">
-    <!-- Add dynamically recipes -->
+      <!-- Add dynamically recipes -->
     </div>
 
   </div>
