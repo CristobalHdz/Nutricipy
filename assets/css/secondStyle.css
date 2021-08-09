@@ -1,81 +1,95 @@
 ::placeholder {
-    font-style: italic;
-    font-size: 1em;
-    color: black;
-    padding: 5px;
-  }
+  font-style: italic;
+  font-size: 1em;
+  color: black;
+  padding: 5px;
+}
 
-  body{
-   
-    background-repeat: no-repeat;
-    background-size: cover;
-    
-  }
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  aside{
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    border-right:solid ;
-    flex: 30%;
-    
-  }
+aside {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  border-right: solid;
+  flex: 30%;
+}
 
- .submit{
-    border-radius: 5px;
- }
+.submit {
+  border-radius: 5px;
+}
 
-  .overWeight{
-    background-color: red;
+.overWeight {
+  background-color: red;
+}
+.underWeight {
+  background-color: darkkhaki;
+}
+.normalWeight {
+  background-color: greenyellow;
+}
+#bmi-box {
+  /* background-color: ;*/
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: solid;
+}
+#bmi-Category {
+  /* background-color: ;*/
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 2px solid;
+}
+#bmi-text {
+  font-size: 18px;
+}
+#calories {
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid;
+  margin: 10px auto;
+  width: 30%;
+}
+#cal-box {
+}
+#recipe-header {
+  /* background-color: ;*/
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 2px solid;
+}
+#gen-recipe-header {
+  width: 100%;
+}
+#divContainer {
+ /* background-color: springgreen; */
+}
+#filter-btn {
+  
+  width: 60%;
+  margin: 0 auto;
+  font-size: 20px;
+  margin-top: 30px;
+  
+}
+#search-bar{
+  margin-top: 30px;
+}
+#submit-btn button{
+  /* background-color: purple ;*/
 
-  }
-  .underWeight{
-    background-color: darkkhaki;
-
-  }
-  .normalWeight{
- background-color: greenyellow;
-  }
-  #bmi-box{
-   /* background-color: ;*/
-    font-size: 25px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: solid;
-  }
-  #bmi-Category{
-    /* background-color: ;*/
-    font-size: 18px;
-    font-weight: bold;
-    padding: 5px 10px;
-    border: 2px solid;
-  }
-  #bmi-text{
-    font-size: 18px;
-  }
-  #calories{
-    font-size: 20px;
-    font-weight: bold;
-    border: 2px solid;
-    margin: 10px auto;
-    width: 30%;
-
-   
-  }
-  #cal-box{
-
-  }
-  #recipe-header{
-     /* background-color: ;*/
-     font-size: 18px;
-     font-weight: bold;
-     padding: 5px 10px;
-     border: 2px solid;
-
-  }
-  #gen-recipe-header{
-  width: 280%
-  }
-  #divContainer{
-    background-color: springgreen;
-  }
+  font-size: 20px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 2px solid;
+  transition: 0.3s;
+}
+button:hover{
+ letter-spacing: 1px;
+}

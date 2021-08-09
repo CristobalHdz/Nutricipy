@@ -25,7 +25,7 @@
 
       <div id="filters">
         <h3 id = "recipe-header"class="center-align">Recipe Filter</h2>
-
+        <div id = "filter-btn">
           <label class="black-text">
             <input type="checkbox" id="vegan" name="filters" value="Vegan">
             <span for="vegan"> Vegan</span><br>
@@ -63,18 +63,20 @@
             <input type="checkbox" id="sulfites-free" name="caution" value="Sulfites">
             <span for="sulfites-free"> Sulfites-Free</span><br>
           </label>
+        </div>
 
 
           <input type="text" id="search-bar" name="input" placeholder="e.g Chicken"><br><br>
-          <div class="center-align">
-            <input class=" black-text submit" type="submit" id="submit" name="S" value="Search for recipes">
+          <div id = "submit-btn" class="center-align">
+            <button class="black-text submit" id="submit" name="S">Search for recipes</button>
           </div>
+       
       </div>
   
 
   </aside>
 
-  <div id = "divContainer"class="col s9 center-align recipes">
+  <div id = "divContainer"class="col s9 push-m3 center-align recipes">
     <h3 id = "gen-recipe-header"class="green lighten-5 ">Recipes with selected filters and recommended calorie sum</h3>
 
     <div id="recipeDiv">
