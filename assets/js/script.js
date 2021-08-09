@@ -189,7 +189,7 @@ function getRecipes(userInput, calorie) {
     url: getFoodUrl(userInput),
     method: "GET",
     headers: {
-      "x-rapidapi-key": "063a4befffmsh982429b07695621p17a36cjsnc0376e97dbec",
+      "x-rapidapi-key": "55e1fbba30msh2921cd4e574c53ep131afejsnd738f6e0eef3",
       "x-rapidapi-host": "edamam-recipe-search.p.rapidapi.com",
     },
   };
