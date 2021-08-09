@@ -1,9 +1,61 @@
+var cal = 0;
+
 var arrayOfFilters = [];
 var arrayOfCautions = [];
+var otherHtml = "./secondPage.html";
 
+var calculateBtn = $("#calculateBtn");
 var searchInputBar = $('input[name = "input"]');
+var heightInput = $("#heightInput");
+var weightInput = $("#weightInput");
+var ageInput = $("#ageInput");
+var genderInput = $("#genderDiv");
+var calculatedBmi = $("#bmi-Category")
+
+heightInput.val(localStorage.getItem("height"));
+weightInput.val(localStorage.getItem("weight"));
+ageInput.val(localStorage.getItem("age"));
+
+var selectedGender = localStorage.getItem("gender");
+
+if (selectedGender == "male") {
+  $('input[value="male"]').prop("checked", true);
+} else if (selectedGender == "female") {
+  $('input[value="female"]').prop("checked", true);
+}
+
+calculateBtn.on("click", function () {
+  console.log("btn");
+  localStorage.setItem("height", heightInput.val());
+  console.log(localStorage.getItem("height"));
+
+  localStorage.setItem("weight", weightInput.val());
+  console.log(localStorage.getItem("weight"));
+
+  localStorage.setItem("age", ageInput.val());
+  console.log(localStorage.getItem("age"));
+
+  localStorage.setItem("gender", $('input[name="gender"]:checked').val());
+  console.log(localStorage.getItem("gender"));
+  updateUserInfo();
+  console.log(userInput);
+  location.replace(otherHtml);
+});
+
+function updateUserInfo() {
+  userInput.height = parseInt(localStorage.getItem("height"));
+  console.log(userInput.height);
+  userInput.weight = parseInt(localStorage.getItem("weight"));
+  console.log(userInput.weight);
+  userInput.age = parseInt(localStorage.getItem("age"));
+  console.log(userInput.age);
+  userInput.gender = localStorage.getItem("gender");
+  console.log(userInput.gender);
+}
 
 $("#submit").on("click", function () {
+  updateUserInfo();
+  console.log(userInput);
   recipeDiv.html("");
   arrayOfFilters = [];
   arrayOfCautions = [];
@@ -25,27 +77,57 @@ $("#submit").on("click", function () {
   //console.log(arrayOfFilters.join(""));
   userInput.search = localStorage.getItem("searchInput");
   console.log(userInput);
-  getRecipesByCalorie(userInput); //calling the first function
+  //getRecipesByCalorie(userInput); //calling the first function
+  getRecipes(userInput, cal); //3 meals
 });
 
 // ***** RETRIEVE DATA ACCORDING TO USER'S NEEDS *****
 
 // Object to store user's response to form
 let userInput = {
-  age: 19,
-  gender: "male",
-  height: 180,
-  weight: 70,
+  age: 0,
+  gender: "",
+  height: "0",
+  weight: 0,
   search: "",
 };
+//to calculate bmi 
+function calculateBMI() {
+  var weight = userInput.weight;
+  
+  console.log("userINput " + weight);
+
+  var height = userInput.height;
+  
+  let bmi = (weight / ((height * height) / 10000)).toFixed(2);
+  console.log(bmi)
+
+  if (bmi < 18.6) {
+    console.log("underweight")
+    calculatedBmi.text("Underweight")
+    calculatedBmi.addClass("underWeight")
+  }
+  else if (bmi >= 18.6 && bmi < 24.9){
+    console.log("normal")
+    calculatedBmi.text("Normal")
+    calculatedBmi.addClass("normalWeight")
+  }else {
+    console.log("overweight")
+    calculatedBmi.text("Overweight")
+    calculatedBmi.addClass("overWeight")
+  };
+}
 
 // Start the API Call to retrieve all recipies filtered by calories
-//getRecipesByCalorie(userInput);
+updateUserInfo();
+getRecipesByCalorie(userInput);
+calculateBMI();
 
 // ***** MANAGE API CALL TO FITNESS API TO GET CALORIE INTAKE FOR USER *****
 
 // Get the API url for calorie intake
 function getCalorieUrl(userInput) {
+  console.log(userInput);
   const params =
     "macrocalculator?age=" +
     userInput.age +
@@ -76,11 +158,14 @@ function getRecipesByCalorie(userInput) {
 
   // Calculate max calorie intake. Use data to filter food
   $.ajax(settings).then(function (response) {
-    // REMINDER: I DELETED THE DIVISION FOR TESTING PURPOSES 
+    // REMINDER: I DELETED THE DIVISION FOR TESTING PURPOSES
     // ********************
     // ********************
-    getRecipes(userInput, response.calorie); //3 meals
-    console.log(response.calorie); // these are the calories for user display these in page
+    console.log(response); // these are the calories for user display these in page
+    $("#calories").text(Math.round(response.calorie / 3));
+
+    // getRecipes(userInput, response.calorie / 3); //3 meals
+    cal = response.calorie / 3;
   });
 }
 
@@ -135,8 +220,8 @@ function processRecipes(recipes, calorie) {
     }
 
     // Check if recipe doesn't have caution ingredients
-    for(let j = 0; j < arrayOfCautions.length; j++) {
-      if(
+    for (let j = 0; j < arrayOfCautions.length; j++) {
+      if (
         Object.values(recipes[i].recipe.cautions).includes(arrayOfCautions[j])
       ) {
         valid = false;

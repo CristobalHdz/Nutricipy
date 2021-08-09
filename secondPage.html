@@ -5,25 +5,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="./css/secondStyle.css">
+  <link rel="stylesheet" href="./assets/css/secondStyle.css">
   <title>Nutricipy</title>
 </head>
 
 <body>
 
   <div class="row">
-    <aside class="col s3 green lighten-3 ">
+    <aside class="col s3">
 
       <div class="center-align">
-        <h2 id=>Calculated BMI</h2><br>
-        <p id="bmi-Category">Overweight</p><br>
-        <p>Suggested calorie intake per meal</p>
-        <p id="calories">300</p>
+        <h2 id= "bmi-box">Calculated BMI</h2>
+        <p id="bmi-Category" >Overweight</p>
+        <p id = "bmi-text">Suggested calorie <br> intake per meal</p>
+        <div id = "cal-box">
+        <p id="calories"></p>
+      </div>
       </div>
 
       <div id="filters">
-        <h3 class="center-align">Recipe Filter</h2>
-
+        <h3 id = "recipe-header"class="center-align">Recipe Filter</h2>
+        <div id = "filter-btn">
           <label class="black-text">
             <input type="checkbox" id="vegan" name="filters" value="Vegan">
             <span for="vegan"> Vegan</span><br>
@@ -61,31 +63,34 @@
             <input type="checkbox" id="sulfites-free" name="caution" value="Sulfites">
             <span for="sulfites-free"> Sulfites-Free</span><br>
           </label>
+        </div>
 
 
           <input type="text" id="search-bar" name="input" placeholder="e.g Chicken"><br><br>
-          <div class="center-align">
-            <input class=" black-text submit" type="submit" id="submit" name="S" value="Search for recipes">
+          <div id = "submit-btn" class="center-align">
+            <button class="black-text submit" id="submit" name="S">Search for recipes</button>
           </div>
+       
       </div>
-  </div>
+  
 
   </aside>
 
-  <div class="col s9 center-align recipes">
-    <h3 class="green lighten-5 ">Recipes with selected filters and recommended calorie sum</h3>
+  <div id = "divContainer"class="col s9 push-m3 center-align recipes">
+    <h3 id = "gen-recipe-header"class="green lighten-5 ">Recipes with selected filters and recommended calorie sum</h3>
 
     <div id="recipeDiv">
     <!-- Add dynamically recipes -->
     </div>
-
-  </div>
+</div>
+</div>
+ 
 
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="./js/script.js"></script>
+  <script src="./assets/js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  </div>
+
 
 </body>
 
