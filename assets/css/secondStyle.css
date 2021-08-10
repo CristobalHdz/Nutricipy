@@ -6,7 +6,7 @@
 }
 
 body {
-  /*background-image: url("../images/backgroundPic.jpg"); */
+ 
   background-image: url("../images/backgroundPic.jpg");
   background-image: url("../images/pic2.jpg");
   background-color: #cccccc; /* Used if the image is unavailable */
@@ -16,22 +16,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
-  /*
-  background-repeat: no-repeat;
-  background-size: 1500px 1500px;
-  background-size: cover;
-  background-position: center;
-  */
 }
-/*
-img {
-  background-position: center;
-  background-size: cover;
+#submit{
+  box-shadow: 5px 5px 5px #605f5f;
+  
 }
-*/
 #menu {
   background-color: white;
+ 
   /*z-index: auto;*/
 }
 #gen-recipe-header {
@@ -42,9 +34,10 @@ img {
 #bmi-Category,
 #calories {
   color: white;
+  box-shadow: 5px 5px 5px #c6c5c5;
 }
 #calories {
-  background-color: turquoise;
+  
   width: 25%;
   margin: 0 auto;
   border-radius: 5px;
@@ -52,6 +45,7 @@ img {
 
 #bmi-Category {
   /* background-color: ;*/
+  
   font-size: 18px;
 }
 
@@ -66,10 +60,9 @@ img {
 }
 
 #bmi-box {
-  /* background-color: ;*/
-  /*background-color: green;*/
   font-size: 25px;
   padding: 10px 20px;
+  box-shadow: 5px 5px 5px #c6c5c5;
 }
 
 #bmi-text {
@@ -167,7 +160,6 @@ img {
 }
 
 #bmi-Category {
-  /* background-color: ;*/
   font-size: 18px;
   font-weight: bold;
   padding: 5px 10px;
@@ -181,9 +173,6 @@ img {
   border: 2px black;
 }
 
-#divContainer {
-  /* background-color: springgreen; */
-}
 #filter-btn {
   width: 60%;
   margin: 0 auto;
@@ -193,9 +182,7 @@ img {
 #search-bar {
   margin-top: 30px;
 }
-#submit-btn button {
-  /* background-color: purple ;*/
-}
+
 
 #foodInput input {
   font-style: italic;
