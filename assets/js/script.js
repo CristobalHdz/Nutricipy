@@ -254,7 +254,7 @@ function showRecipes(recipes) {
     div.addClass("card");
     div.addClass("horizontal");
     var div2 = $("<div>");
-    div2.addClass("card-image col s10 m3");
+    div2.addClass("card-image col s10 m3 l4");
 
     var div3 = $("<div>");
     div3.addClass("card-stacked");
