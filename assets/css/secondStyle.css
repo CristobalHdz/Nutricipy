@@ -51,7 +51,10 @@
 
   #foodInput input {
     font-style: italic;
+  }
 
+  #recipeDiv{
+    margin-left:400px;
   }
 
   @media screen and (max-width: 425px) {
