@@ -254,7 +254,7 @@ function showRecipes(recipes) {
     div.addClass("card");
     div.addClass("horizontal");
     var div2 = $("<div>");
-    div2.addClass("card-image col s10 m3 l4");
+    div2.addClass("card-image col s10 m3 l3");
 
     var div3 = $("<div>");
     div3.addClass("card-stacked");
@@ -274,7 +274,7 @@ function showRecipes(recipes) {
     var recipeLink = $("<a>");
     recipeLink.attr("href", recipes[i].recipe.url);
     recipeLink.attr("target", "_blank");
-    recipeLink.text("Link" + recipes[i].recipe.url);
+    recipeLink.text("Show Recipe");
 
     var img = $("<img>");
 

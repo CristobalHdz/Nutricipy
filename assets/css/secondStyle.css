@@ -243,10 +243,16 @@ body {
     padding-bottom: 220px;
     position: fixed;
     top: 0;
-    width: 400px;
+    width: 550px;
   }
   #filters-btn {
     margin-bottom: 30px;
+  }
+  .filterChild{
+    margin-bottom: 15px;
+  }
+  #filters-btn label span {
+    font-size: 25px;
   }
   #recipesDisplayer .card-panel {
     margin-left: 400px;
@@ -258,13 +264,33 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
   }
+  #recipeDiv {
+    margin-left: 560px;
+  }
 }
+
+.card-image {
+  position:relative;
+  width:20%
+}
+
+.card-image img{
+  position:absolute;
+  top:0;
+  min-width:50%;
+  height:50%;
+  object-fit:cover;
+  margin-right:0;
+}
+
+.card-stacked{
+  width: 80%;
+}
+
 button:hover {
   letter-spacing: 1px;
 }
+
 .card-image {
   margin: auto 0;
-}
-#recipeDiv {
-  margin-left: 400px;
 }
