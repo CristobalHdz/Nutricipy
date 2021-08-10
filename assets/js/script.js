@@ -1,3 +1,10 @@
+let userInput = {
+  age: 0,
+  gender: "",
+  height: "0",
+  weight: 0,
+  search: "",
+};
 var cal = 0;
 
 var arrayOfFilters = [];
@@ -84,13 +91,6 @@ $("#submit").on("click", function () {
 // ***** RETRIEVE DATA ACCORDING TO USER'S NEEDS *****
 
 // Object to store user's response to form
-let userInput = {
-  age: 0,
-  gender: "",
-  height: "0",
-  weight: 0,
-  search: "",
-};
 //to calculate bmi
 function calculateBMI() {
   var weight = userInput.weight;
@@ -293,38 +293,3 @@ function showRecipes(recipes) {
     recipeDiv.append(div);
   }
 }
-
-//function clearBox (recipeDiv){
-//    while(div.firstChild)
-//}
-
-/*
-function processRecipes(recipes, calorie) {
-  var vaildRecipes = [];
-
-  for (let i = 0; i < recipes.length; i++) {
-    //console.log(recipes[i])
-    var vaild = true;
-
-    for (let j = 0; j < arrayOfFilters.length; j++) {
-        console.log(arrayOfFilters[j])
-      if (
-        !Object.values(recipes[i].recipe.healthLabels).includes(
-          arrayOfFilters[j]
-        )
-      ) {
-        vaild = false;
-      }
-      if (recipes[i].recipe.calories < calorie) {
-        vaild = false;
-      }
-    }
-    console.log(vaild)
-    if (vaild) {
-        console.log("vaild")
-      vaildRecipes.push(recipes[i]);
-    }
-  }
-  showRecipes(vaildRecipes); //call the showRecipes function
-}
-*/
