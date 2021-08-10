@@ -1,5 +1,4 @@
 ::placeholder {
- secondHomepage3.0
     font-style: italic;
     font-size: 1em;
     color: black;
@@ -128,11 +127,6 @@
       margin-bottom: 30px;
     }
   }
-  font-style: italic;
-  font-size: 1em;
-  color: black;
-  padding:5px
-}
 
 body{
   background-image: url("../images/ScndBackgroundpic.jpg");
