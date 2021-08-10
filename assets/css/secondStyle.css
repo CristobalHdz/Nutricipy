@@ -2,24 +2,26 @@
   font-style: italic;
   font-size: 1em;
   color: black;
-  padding: 5px;
+  padding:5px
 }
 
-body {
+body{
+  background-image: url("../images/ScndBackgroundpic.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-aside {
-  height: 100%;
-  width: 160px;
-  position: fixed;
-  border-right: solid;
-  flex: 30%;
+#bmi-Category, #calories{
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
-.submit {
-  border-radius: 5px;
+#bmi-Category {
+  /* background-color: ;*/
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border: 2px solid;
 }
 
 .overWeight {
@@ -31,6 +33,7 @@ aside {
 .normalWeight {
   background-color: greenyellow;
 }
+
 #bmi-box {
   /* background-color: ;*/
   font-size: 25px;
@@ -38,58 +41,89 @@ aside {
   padding: 10px 20px;
   border: solid;
 }
-#bmi-Category {
-  /* background-color: ;*/
-  font-size: 18px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border: 2px solid;
-}
+
 #bmi-text {
   font-size: 18px;
 }
-#calories {
-  font-size: 20px;
-  font-weight: bold;
-  border: 2px solid;
-  margin: 10px auto;
-  width: 30%;
-}
-#cal-box {
-}
-#recipe-header {
-  /* background-color: ;*/
-  font-size: 18px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border: 2px solid;
-}
-#gen-recipe-header {
-  width: 100%;
-}
-#divContainer {
- /* background-color: springgreen; */
-}
-#filter-btn {
-  
-  width: 60%;
-  margin: 0 auto;
-  font-size: 20px;
-  margin-top: 30px;
-  
-}
-#search-bar{
-  margin-top: 30px;
-}
-#submit-btn button{
-  /* background-color: purple ;*/
 
-  font-size: 20px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border: 2px solid;
-  transition: 0.3s;
+#filters-btn{
+  border: 2px black;
 }
-button:hover{
- letter-spacing: 1px;
+
+#foodInput input {
+  font-style: italic;
+
+}
+
+@media screen and (max-width: 425px) {
+  #calculatedBoxes {
+    font-size: 30px;
+  }
+  #filters-btn label span  {
+    font-size: 30px;
+  }
+  #filters-btn {
+    line-height: 57px;
+  }
+  #search-bar{
+    font-size:30px;
+    height:35px;
+    margin-top:30px;
+    margin-bottom:30px;
+  }
+  button{
+    margin-top:30px;
+    margin-bottom:30px;
+    height:50px;
+    font-size: 60px;
+ }
+}
+
+@media screen and (min-width: 426px) and (max-width: 992px) {
+  #calculatedBoxes {
+    font-size: 30px;
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+  #filters-btn label span  {
+    font-size: 40px;
+  }
+  #filters-btn {
+    line-height: 65px;
+  }
+  #filters h3{
+    margin-bottom: 40px;
+  }
+  #search-bar{
+    font-size:30px;
+    height:35px;
+    margin-top:20px;
+    margin-bottom:10px;
+  }
+  button{
+    margin-top:30px;
+    margin-bottom:30px;
+    height:50px;
+ }
+}
+
+@media screen and (min-width: 993px) {
+  #menu{
+    padding-bottom: 220px;
+    position:absolute;
+    width:400px;
+  }
+  #filters-btn{
+    margin-bottom: 30px;
+  }
+  #recipesDisplayer .card-panel{
+    margin-left: 400px;
+  }
+  #foodInput input{
+    font-size: 30px;
+  }
+  #foodInput button{
+    margin-top:30px;
+    margin-bottom: 30px;
+  }
 }
