@@ -68,20 +68,18 @@ aside {
   width: 100%;
 }
 #divContainer {
- /* background-color: springgreen; */
+  /* background-color: springgreen; */
 }
 #filter-btn {
-  
   width: 60%;
   margin: 0 auto;
   font-size: 20px;
   margin-top: 30px;
-  
 }
-#search-bar{
+#search-bar {
   margin-top: 30px;
 }
-#submit-btn button{
+#submit-btn button {
   /* background-color: purple ;*/
 
   font-size: 20px;
@@ -90,6 +88,9 @@ aside {
   border: 2px solid;
   transition: 0.3s;
 }
-button:hover{
- letter-spacing: 1px;
+button:hover {
+  letter-spacing: 1px;
+}
+.card-image {
+  margin: auto 0;
 }

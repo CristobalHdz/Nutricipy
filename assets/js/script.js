@@ -10,7 +10,7 @@ var heightInput = $("#heightInput");
 var weightInput = $("#weightInput");
 var ageInput = $("#ageInput");
 var genderInput = $("#genderDiv");
-var calculatedBmi = $("#bmi-Category")
+var calculatedBmi = $("#bmi-Category");
 
 heightInput.val(localStorage.getItem("height"));
 weightInput.val(localStorage.getItem("weight"));
@@ -91,31 +91,30 @@ let userInput = {
   weight: 0,
   search: "",
 };
-//to calculate bmi 
+//to calculate bmi
 function calculateBMI() {
   var weight = userInput.weight;
-  
+
   console.log("userINput " + weight);
 
   var height = userInput.height;
-  
+
   let bmi = (weight / ((height * height) / 10000)).toFixed(2);
-  console.log(bmi)
+  console.log(bmi);
 
   if (bmi < 18.6) {
-    console.log("underweight")
-    calculatedBmi.text("Underweight")
-    calculatedBmi.addClass("underWeight")
+    console.log("underweight");
+    calculatedBmi.text("Underweight");
+    calculatedBmi.addClass("underWeight");
+  } else if (bmi >= 18.6 && bmi < 24.9) {
+    console.log("normal");
+    calculatedBmi.text("Normal");
+    calculatedBmi.addClass("normalWeight");
+  } else {
+    console.log("overweight");
+    calculatedBmi.text("Overweight");
+    calculatedBmi.addClass("overWeight");
   }
-  else if (bmi >= 18.6 && bmi < 24.9){
-    console.log("normal")
-    calculatedBmi.text("Normal")
-    calculatedBmi.addClass("normalWeight")
-  }else {
-    console.log("overweight")
-    calculatedBmi.text("Overweight")
-    calculatedBmi.addClass("overWeight")
-  };
 }
 
 // Start the API Call to retrieve all recipies filtered by calories
@@ -252,6 +251,19 @@ function showRecipes(recipes) {
     //console.log(recipes[0].recipe.label)
 
     var div = $("<div>");
+    div.addClass("card");
+    div.addClass("horizontal");
+    var div2 = $("<div>");
+    div2.addClass("card-image col s10 m3");
+
+    var div3 = $("<div>");
+    div3.addClass("card-stacked");
+
+    var div4 = $("<div>");
+    div4.addClass("card-content");
+
+    var div5 = $("<div>");
+    div5.addClass("card-action");
 
     var recipeName = $("<h4>");
     recipeName.text(recipes[i].recipe.label);
@@ -265,15 +277,20 @@ function showRecipes(recipes) {
     recipeLink.text("Link" + recipes[i].recipe.url);
 
     var img = $("<img>");
+
     img.attr("src", recipes[i].recipe.image);
     // img.text(recipes[i].recipe.image);
 
     //append them
+    div3.append(div4);
+    div3.append(div5);
+    div.append(div3);
+    div.append(div2);
+    div4.append(recipeName);
+    div4.append(calories);
+    div5.append(recipeLink);
+    div2.append(img);
     recipeDiv.append(div);
-    div.append(recipeName);
-    div.append(calories);
-    div.append(recipeLink);
-    div.append(img);
   }
 }
 
