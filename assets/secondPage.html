@@ -15,15 +15,15 @@
     <aside id="menu" class="col s12 m12 l3 green lighten-3">
 
       <div class="col s10 offset-s1 center-align" id="calculatedBoxes">
-        <h3 id=><b>Calculated BMI</b></h3>
+        <h3 id=bmi-box><b>Calculated BMI</b></h3>
         <p id="bmi-Category">Overweight</p>
-        <p>Suggested calorie intake per meal:</p>
+        <p id="bmi-text">Suggested calorie intake per meal:</p>
         <p id="calories">300</p>
       </div>
 
       <div id="filters">
-        <h3 class="col s12 center-align">Recipe Filter</h3>
-        <div id="filtersParent" class="col s10 m6 l5 offset-s1 offset-m4 offset-l3">
+        <h3 id="recipe-header" class="col s12 center-align"><b>Recipe Filter</b></h3>
+        <div id="filters-btn" class="col s10 m6 l5 offset-s1 offset-m4 offset-l3">
 
           <div class="filterChild">
             <label class="black-text"><input type="checkbox" id="alcohol-free" name="filters" value="Alcohol-Free">
@@ -61,7 +61,6 @@
               </input>
           </div>
 
-
           <div class="filterChild">
             <label class="black-text"><input type="checkbox" id="sulfites-free" name="caution" value="Sulfites">
               <span for="sulfites-free"> Sulfites-Free</span>
@@ -84,12 +83,12 @@
           </div>
         </div>
 
-
         <label id="foodInput" class="black-text">
           <input class="col s10 offset-s1 center-align" type="text" id="search-bar" name="input"
             placeholder="e.g Chicken">
           <div class="center-align">
-            <button class="col s12 l7 offset-l2 center-align waves-effect light-green darken-3 btn-large" type="submit"
+            <button id="submit-btn"
+              class="col s12 l7 offset-l2 center-align waves-effect light-green darken-3 btn-large" type="submit"
               id="submit" name="S">
               Search for recipes
             </button>
@@ -98,11 +97,12 @@
     </aside>
 
     <div id="recipesDisplayer" class="col s12 m12 l12">
-      <h3 class="card-panel transparent white-text bold l8">Recipes with selected filters and recommended calorie sum</h3>
+      <h3 id="gen-recipe-header" class="card-panel transparent white-text bold l8">Recipes with selected filters and
+        recommended calorie sum</h3>
 
-        <div id="recipeDiv">
-          <!-- "Add dynamically recipes -->
-        </div>
+      <div id="recipeDiv">
+        <!-- "Add dynamically recipes -->
+      </div>
 
     </div>
   </div>

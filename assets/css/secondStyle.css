@@ -2,6 +2,7 @@
     font-style: italic;
     font-size: 1em;
     color: black;
+    padding:5px
   }
 
   body{
@@ -15,12 +16,38 @@
     border-radius: 5px;
   }
 
-  #filtersParent{
-    border: 2px black;
+  #bmi-Category {
+    /* background-color: ;*/
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border: 2px solid;
   }
 
-  #filters h3{
+  .overWeight {
+    background-color: red;
+  }
+  .underWeight {
+    background-color: darkkhaki;
+  }
+  .normalWeight {
+    background-color: greenyellow;
+  }
+
+  #bmi-box {
+    /* background-color: ;*/
+    font-size: 25px;
     font-weight: bold;
+    padding: 10px 20px;
+    border: solid;
+  }
+
+  #bmi-text {
+    font-size: 18px;
+  }
+
+  #filters-btn{
+    border: 2px black;
   }
 
   #foodInput input {
@@ -32,10 +59,10 @@
     #calculatedBoxes {
       font-size: 30px;
     }
-    #filtersParent label span  {
+    #filters-btn label span  {
       font-size: 30px;
     }
-    #filtersParent {
+    #filters-btn {
       line-height: 57px;
     }
     #search-bar{
@@ -58,10 +85,10 @@
       margin-top:10px;
       margin-bottom: 10px;
     }
-    #filtersParent label span  {
+    #filters-btn label span  {
       font-size: 40px;
     }
-    #filtersParent {
+    #filters-btn {
       line-height: 65px;
     }
     #filters h3{
@@ -86,7 +113,7 @@
       position:absolute;
       width:400px;
     }
-    #filtersParent{
+    #filters-btn{
       margin-bottom: 30px;
     }
     #recipesDisplayer .card-panel{
