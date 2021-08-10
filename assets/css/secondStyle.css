@@ -6,38 +6,69 @@
 }
 
 body {
+  /*background-image: url("../images/backgroundPic.jpg"); */
+  background-image: url("../images/backgroundPic.jpg");
+  background-image: url("../images/pic2.jpg");
+  background-color: #cccccc; /* Used if the image is unavailable */
+
+  height: 500px;
+  background-position: right;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  /*
+  background-repeat: no-repeat;
+  background-size: 1500px 1500px;
+  background-size: cover;
+  background-position: center;
+  */
+}
+/*
+img {
+  background-position: center;
   background-size: cover;
 }
-
+*/
+#menu {
+  background-color: white;
+  /*z-index: auto;*/
+}
+#gen-recipe-header {
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
+}
 #bmi-Category,
 #calories {
-  border: 2px solid black;
+  color: white;
+}
+#calories {
+  background-color: turquoise;
+  width: 25%;
+  margin: 0 auto;
   border-radius: 5px;
 }
 
 #bmi-Category {
   /* background-color: ;*/
   font-size: 18px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border: 2px solid;
 }
 
 .overWeight {
-  background-color: red;
+  background-color: #f44336;
 }
 .underWeight {
   background-color: darkkhaki;
 }
 .normalWeight {
-  background-color: greenyellow;
+  background-color: #ffa726;
 }
 
 #bmi-box {
   /* background-color: ;*/
+  /*background-color: green;*/
   font-size: 25px;
-  font-weight: bold;
   padding: 10px 20px;
 }
 
@@ -47,6 +78,8 @@ body {
 
 #filters-btn {
   border: 2px black;
+
+  white-space: nowrap;
 }
 
 #foodInput input {
@@ -107,7 +140,7 @@ body {
 
 @media screen and (min-width: 993px) {
   #menu {
-    padding-bottom: 220px;
+    padding-bottom: 720px;
     position: absolute;
     width: 400px;
   }
@@ -128,8 +161,9 @@ body {
 
 #bmi-Category,
 #calories {
-  border: 2px solid black;
-  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
 }
 
 #bmi-Category {
@@ -137,25 +171,6 @@ body {
   font-size: 18px;
   font-weight: bold;
   padding: 5px 10px;
-  border: 2px solid;
-}
-
-.overWeight {
-  background-color: red;
-}
-.underWeight {
-  background-color: darkkhaki;
-}
-.normalWeight {
-  background-color: greenyellow;
-}
-
-#bmi-box {
-  /* background-color: ;*/
-  font-size: 25px;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: solid;
 }
 
 #bmi-text {
@@ -208,6 +223,9 @@ body {
     height: 50px;
     font-size: 60px;
   }
+  .row .col {
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 426px) and (max-width: 992px) {
@@ -236,6 +254,9 @@ body {
     margin-bottom: 30px;
     height: 50px;
   }
+  .row .col {
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 993px) {
@@ -248,7 +269,7 @@ body {
   #filters-btn {
     margin-bottom: 30px;
   }
-  .filterChild{
+  .filterChild {
     margin-bottom: 15px;
   }
   #filters-btn label span {
@@ -265,25 +286,25 @@ body {
     margin-bottom: 30px;
   }
   #recipeDiv {
-    margin-left: 560px;
+    margin-left: 575px;
   }
 }
 
 .card-image {
-  position:relative;
-  width:20%
+  position: relative;
+  width: 20%;
 }
 
-.card-image img{
-  position:absolute;
-  top:0;
-  min-width:50%;
-  height:50%;
-  object-fit:cover;
-  margin-right:0;
+.card-image img {
+  position: absolute;
+  top: 0;
+  min-width: 50%;
+  height: 50%;
+  object-fit: cover;
+  margin-right: 0;
 }
 
-.card-stacked{
+.card-stacked {
   width: 80%;
 }
 
@@ -293,4 +314,19 @@ button:hover {
 
 .card-image {
   margin: auto 0;
+}
+
+@media screen and (min-width: 1000px) {
+  #gen-recipe-header {
+    position: relative;
+    left: 84px;
+  }
+  #menu {
+    padding-bottom: 720px;
+    position: absolute;
+    width: 495px;
+  }
+  #recipeDiv {
+    margin-left: 567px;
+  }
 }
