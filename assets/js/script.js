@@ -50,9 +50,9 @@ function updateUserInfo() {
   var selectedUnit = localStorage.getItem("unit");
   if (selectedUnit == "metric") {
     $('input[value="metric"]').prop("checked", true);
-    userInput.height = parseInt(localStorage.getItem("height"));
+    userInput.height = parseFloat(localStorage.getItem("height"));
     console.log(userInput.height);
-    userInput.weight = parseInt(localStorage.getItem("weight"));
+    userInput.weight = parseFloat(localStorage.getItem("weight"));
     console.log(userInput.weight);
     userInput.age = parseInt(localStorage.getItem("age"));
     console.log(userInput.age);
@@ -62,9 +62,9 @@ function updateUserInfo() {
     console.log(userInput.Unit);
   } else if (selectedUnit == "imperial") {
     $('input[value="imperial"]').prop("checked", true);
-    userInput.height = parseInt(localStorage.getItem("height"))*30.48;
+    userInput.height = parseFloat(localStorage.getItem("height"))*30.48;
     console.log(userInput.height);
-    userInput.weight = parseInt(localStorage.getItem("weight"))*.454;
+    userInput.weight = parseFloat(localStorage.getItem("weight"))*.454;
     console.log(userInput.weight);
     userInput.age = parseInt(localStorage.getItem("age"));
     console.log(userInput.age);
