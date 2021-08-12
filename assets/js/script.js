@@ -2,7 +2,7 @@ var cal = 0;
 
 var arrayOfFilters = [];
 var arrayOfCautions = [];
-var otherHtml = "./secondPage.html";
+var otherHtml = "assets/secondPage.html";
 
 var calculateBtn = $("#calculateBtn");
 var searchInputBar = $('input[name = "input"]');
@@ -37,20 +37,46 @@ calculateBtn.on("click", function () {
 
   localStorage.setItem("gender", $('input[name="gender"]:checked').val());
   console.log(localStorage.getItem("gender"));
+
+  localStorage.setItem("unit", $('input[name="measure"]:checked').val());
+  console.log(localStorage.getItem("measure"));
+
   updateUserInfo();
   console.log(userInput);
   location.replace(otherHtml);
 });
 
 function updateUserInfo() {
-  userInput.height = parseInt(localStorage.getItem("height"));
-  console.log(userInput.height);
-  userInput.weight = parseInt(localStorage.getItem("weight"));
-  console.log(userInput.weight);
-  userInput.age = parseInt(localStorage.getItem("age"));
-  console.log(userInput.age);
-  userInput.gender = localStorage.getItem("gender");
-  console.log(userInput.gender);
+  var selectedUnit = localStorage.getItem("unit");
+  if (selectedUnit == "metric") {
+    $('input[value="metric"]').prop("checked", true);
+    userInput.height = parseInt(localStorage.getItem("height"));
+    console.log(userInput.height);
+    userInput.weight = parseInt(localStorage.getItem("weight"));
+    console.log(userInput.weight);
+    userInput.age = parseInt(localStorage.getItem("age"));
+    console.log(userInput.age);
+    userInput.gender = localStorage.getItem("gender");
+    console.log(userInput.gender);
+    userInput.Unit = localStorage.getItem("Unit");
+    console.log(userInput.Unit);
+  } else if (selectedUnit == "imperial") {
+    $('input[value="imperial"]').prop("checked", true);
+    userInput.height = parseInt(localStorage.getItem("height"))*30.48;
+    console.log(userInput.height);
+    userInput.weight = parseInt(localStorage.getItem("weight"))*.454;
+    console.log(userInput.weight);
+    userInput.age = parseInt(localStorage.getItem("age"));
+    console.log(userInput.age);
+    userInput.gender = localStorage.getItem("gender");
+    console.log(userInput.gender);
+    userInput.Unit = localStorage.getItem("Unit");
+    console.log(userInput.Unit);
+  }
+  console.log(selectedUnit);
+
+
+
 }
 
 $("#submit").on("click", function () {
@@ -98,7 +124,7 @@ function calculateBMI() {
   console.log("userINput " + weight);
 
   var height = userInput.height;
-
+  console.log("userINput " + height);
   let bmi = (weight / ((height * height) / 10000)).toFixed(2);
   console.log(bmi);
 
