@@ -2,7 +2,7 @@ var cal = 0;
 
 var arrayOfFilters = [];
 var arrayOfCautions = [];
-var otherHtml = "./secondPage.html";
+var otherHtml = "./assets/secondPage.html";
 
 var calculateBtn = $("#calculateBtn");
 var searchInputBar = $('input[name = "input"]');
