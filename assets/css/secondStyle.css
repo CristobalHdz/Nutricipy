@@ -10,7 +10,6 @@
 }
 
 body {
- 
   background-image: url("../images/backgroundPic.jpg");
   background-image: url("../images/pic2.jpg");
   background-color: #cccccc; /* Used if the image is unavailable */
@@ -181,6 +180,12 @@ button, a:hover {
   }
 }
 
+@media screen and (max-width: 993px) {
+  body{
+    background-image: none;
+  }
+}
+
 @media screen and (min-width: 993px) {
   #menu{
     position:fixed;
@@ -217,7 +222,7 @@ button, a:hover {
  
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 993px) {
   #gen-recipe-header {
     position: relative;
     left: 84px;
