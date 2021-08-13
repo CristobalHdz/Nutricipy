@@ -37,6 +37,10 @@ calculateBtn.on("click", function () {
 
   localStorage.setItem("gender", $('input[name="gender"]:checked').val());
   console.log(localStorage.getItem("gender"));
+
+  localStorage.setItem("unit", $('input[name="measure"]:checked').val());
+  console.log(localStorage.getItem("measure"));
+
   updateUserInfo();
   console.log(userInput);
   location.replace(otherHtml);
@@ -69,7 +73,7 @@ function updateUserInfo() {
     userInput.Unit = localStorage.getItem("Unit");
     console.log(userInput.Unit);
   }}
-  console.log(selectedUnit);
+  
 
 $("#submit").on("click", function () {
   updateUserInfo();
