@@ -225,9 +225,12 @@ button, a:hover {
     left: 84px;
   }
   #menu {
-    padding-bottom: 720px;
+    height:100%;
     position: fixed;
     width: 495px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    white-space: nowrap;
   }
   #recipeDiv {
     margin-left: 500px;
