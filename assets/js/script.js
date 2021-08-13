@@ -45,17 +45,31 @@ calculateBtn.on("click", function () {
   localStorage.setItem("weight", weightInput.val());
   localStorage.setItem("age", ageInput.val());
   localStorage.setItem("gender", $('input[name="gender"]:checked').val());
+  localStorage.setItem("unit", $('input[name="measure"]:checked').val());
 
   updateUserInfo();
   location.replace(otherHtml);
 });
 
-// Updates the variable userInput based on values from local storage
+// Updates the variable userInput based on values from local storage and converts if to metric if
+// imperial unit is selected
 function updateUserInfo() {
-  userInput.height = parseInt(localStorage.getItem("height"));
-  userInput.weight = parseInt(localStorage.getItem("weight"));
-  userInput.age = parseInt(localStorage.getItem("age"));
-  userInput.gender = localStorage.getItem("gender");
+  var selectedUnit = localStorage.getItem("unit");
+  if (selectedUnit == "metric") {
+    $('input[value="metric"]').prop("checked", true);
+    userInput.height = parseFloat(localStorage.getItem("height"));
+    userInput.weight = parseFloat(localStorage.getItem("weight"));
+    userInput.age = parseInt(localStorage.getItem("age"));
+    userInput.gender = localStorage.getItem("gender");
+    userInput.Unit = localStorage.getItem("Unit");
+  } else if (selectedUnit == "imperial") {
+    $('input[value="imperial"]').prop("checked", true);
+    userInput.height = parseFloat(localStorage.getItem("height"))*30.48;
+    userInput.weight = parseFloat(localStorage.getItem("weight"))*.454;
+    userInput.age = parseInt(localStorage.getItem("age"));
+    userInput.gender = localStorage.getItem("gender");
+    userInput.Unit = localStorage.getItem("Unit");
+  }
 }
 
 // Event listener for when the user clicks search
