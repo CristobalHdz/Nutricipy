@@ -1,3 +1,7 @@
+*{
+  scroll-behavior: smooth;
+}
+
 ::placeholder {
   font-style: italic;
   font-size: 1em;
@@ -17,14 +21,12 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-#submit{
+#submit, #goBack{
   box-shadow: 5px 5px 5px #605f5f;
-  
 }
+
 #menu {
   background-color: white;
- 
-  /*z-index: auto;*/
 }
 #gen-recipe-header {
   display: flex;
@@ -35,18 +37,14 @@ body {
 #calories {
   color: white;
   box-shadow: 5px 5px 5px #c6c5c5;
+  font-size: 18px;
+  padding: 5px 10px;
 }
+
 #calories {
-  
   width: 25%;
   margin: 0 auto;
   border-radius: 5px;
-}
-
-#bmi-Category {
-  /* background-color: ;*/
-  
-  font-size: 18px;
 }
 
 .overWeight {
@@ -75,102 +73,17 @@ body {
   white-space: nowrap;
 }
 
-#foodInput input {
-  font-style: italic;
-}
-
-@media screen and (max-width: 425px) {
-  #calculatedBoxes {
-    font-size: 30px;
-  }
-  #filters-btn label span {
-    font-size: 30px;
-  }
-  #filters-btn {
-    line-height: 57px;
-  }
-  #search-bar {
-    font-size: 30px;
-    height: 35px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  button {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 50px;
-    font-size: 60px;
-  }
-}
-
-@media screen and (min-width: 426px) and (max-width: 992px) {
-  #calculatedBoxes {
-    font-size: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  #filters-btn label span {
-    font-size: 40px;
-  }
-  #filters-btn {
-    line-height: 65px;
-  }
-  #filters h3 {
-    margin-bottom: 40px;
-  }
-  #search-bar {
-    font-size: 30px;
-    height: 35px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  button {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    height: 50px;
-  }
-}
-
-@media screen and (min-width: 993px) {
-  #menu {
-    padding-bottom: 720px;
-    position: absolute;
-    width: 400px;
-  }
-  #filters-btn {
-    margin-bottom: 30px;
-  }
-  #recipesDisplayer .card-panel {
-    margin-left: 400px;
-  }
-  #foodInput input {
-    font-size: 30px;
-  }
-  #foodInput button {
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-}
-
-#bmi-Category,
-#calories {
-  color: white;
-  font-size: 18px;
-  padding: 5px 10px;
+#upBtn{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1;
 }
 
 #bmi-Category {
   font-size: 18px;
   font-weight: bold;
   padding: 5px 10px;
-}
-
-#bmi-text {
-  font-size: 18px;
-}
-
-#filters-btn {
-  border: 2px black;
 }
 
 #filter-btn {
@@ -183,9 +96,31 @@ body {
   margin-top: 30px;
 }
 
-
 #foodInput input {
   font-style: italic;
+}
+
+.card-image {
+  position: relative;
+  width: 20%;
+  margin: auto 0;
+}
+
+.card-image img {
+  position: absolute;
+  top: 0;
+  min-width: 50%;
+  height: 50%;
+  object-fit: cover;
+  margin-right: 0;
+}
+
+.card-stacked {
+  width: 80%;
+}
+
+button, a:hover {
+  letter-spacing: 1px;
 }
 
 @media screen and (max-width: 425px) {
@@ -204,7 +139,7 @@ body {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  button {
+  button, a {
     margin-top: 30px;
     margin-bottom: 30px;
     height: 50px;
@@ -236,7 +171,7 @@ body {
     margin-top: 20px;
     margin-bottom: 10px;
   }
-  button {
+  button, a {
     margin-top: 30px;
     margin-bottom: 30px;
     height: 50px;
@@ -247,11 +182,11 @@ body {
 }
 
 @media screen and (min-width: 993px) {
-  #menu {
-    padding-bottom: 220px;
-    position: fixed;
-    top: 0;
-    width: 550px;
+  #menu{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1;
   }
   #filters-btn {
     margin-bottom: 30px;
@@ -268,39 +203,18 @@ body {
   #foodInput input {
     font-size: 30px;
   }
-  #foodInput button {
+  #foodInput button, a {
     margin-top: 30px;
     margin-bottom: 30px;
   }
   #recipeDiv {
     margin-left: 575px;
   }
-}
-
-.card-image {
-  position: relative;
-  width: 20%;
-}
-
-.card-image img {
-  position: absolute;
-  top: 0;
-  min-width: 50%;
-  height: 50%;
-  object-fit: cover;
-  margin-right: 0;
-}
-
-.card-stacked {
-  width: 80%;
-}
-
-button:hover {
-  letter-spacing: 1px;
-}
-
-.card-image {
-  margin: auto 0;
+  #upBtn{
+    width:0px;
+    height:0px;
+  }
+ 
 }
 
 @media screen and (min-width: 1000px) {
@@ -310,10 +224,10 @@ button:hover {
   }
   #menu {
     padding-bottom: 720px;
-    position: absolute;
+    position: fixed;
     width: 495px;
   }
   #recipeDiv {
-    margin-left: 567px;
+    margin-left: 500px;
   }
 }

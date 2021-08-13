@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="./css/secondStyle.css">
+  <link rel='icon' href="./images/NutrifyLogo.png">
   <title>Nutricipy Recipe Search</title>
 </head>
 
@@ -18,7 +19,7 @@
         <h3 id=bmi-box class="light-green darken-3 white-text"><b>Calculated BMI</b></h3>
         <p id="bmi-Category">Overweight</p>
         <p id="bmi-text">Suggested calorie <br> intake per meal:</p>
-        <p id="calories" class = "light-green white-text">300</p>
+        <p id="calories" class="light-green white-text">300</p>
       </div>
 
       <div id="filters">
@@ -86,27 +87,29 @@
         <label id="foodInput" class="black-text">
           <input class="col s10 offset-s1 center-align" type="text" id="search-bar" name="input"
             placeholder="e.g Chicken">
-          <div class="center-align">
-            <button id="submit"
-              class="col s12 l7 offset-l2 center-align waves-effect light-green darken-3 btn-large" type="submit" name="S">
-              Search for recipes
+          <div>
+            <a id="goBack" href="../index.html"
+                class="col s10 l4 offset-l1 offset-m1 offset-s1 center-align waves-effect light-green darken-3 btn-large">
+                Go Back
+              </a>
+            <button id="submit" class="col s10 l4 offset-l2 offset-m1 offset-s1 center-align waves-effect light-green darken-3 btn-large"
+              type="submit" name="S">
+              Search
             </button>
-            <a href="/index.html" 
-              class="col s12 l7 offset-l2 center-align waves-effect light-green darken-3 btn-large">
-              Go Back
-          </a>
-
           </div>
     </aside>
 
     <div id="recipesDisplayer" class="col s12 m12 l12">
-      <h3 id="gen-recipe-header" class="card-panel light-green darken-3 white-text bold l8">Recipes with selected filters and
+      <h3 id="gen-recipe-header" class="card-panel light-green darken-3 white-text bold l8">Recipes with selected
+        filters and
         recommended calorie sum</h3>
-      
+
       <div id="recipeDiv">
         <!-- "Add dynamically recipes -->
       </div>
 
+      <a href="#calculatedBoxes" id="upBtn"
+        class="show-on-medium-and-down btn-floating btn-large waves-effect waves-light light-green darken-3">︽</a>
     </div>
   </div>
 
