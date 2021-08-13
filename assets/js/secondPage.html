@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="./css/secondStyle.css">
+  <title>Nutricipy Recipe Search</title>
+</head>
+
+<body>
+
+  <div class="row">
+    <aside id="menu" class="col s12 m12 l4 ">
+
+      <div class="col s10 offset-s1 center-align" id="calculatedBoxes">
+        <h3 id=bmi-box class="light-green darken-3 white-text"><b>Calculated BMI</b></h3>
+        <p id="bmi-Category">Overweight</p>
+        <p id="bmi-text">Suggested calorie <br> intake per meal:</p>
+        <p id="calories" class = "light-green white-text">300</p>
+      </div>
+
+      <div id="filters">
+        <h3 id="recipe-header" class="col s12 center-align"><b>Recipe Filter</b></h3>
+        <div id="filters-btn" class="col s10 m6 l5 offset-s1 offset-m4 offset-l3">
+
+          <div class="filterChild">
+            <label class="black-text"><input type="checkbox" id="alcohol-free" name="filters" value="Alcohol-Free">
+              <span for="alcohol-free"> Alcohol-Free</span>
+              </input>
+          </div>
+
+          <div class="filterChild">
+            <label class="black-text"><input type="checkbox" id="milk-free" name="caution" value="Milk">
+              <span for="milk-free"> Dairy-Free</span>
+              </input>
+          </div>
+
+          <div class="filterChild">
+            <label class="black-text"><input type="checkbox" id="egg-free" name="caution" value="Eggs">
+              <span for="egg-free"> Egg-Free</span>
+              </input>
+          </div>
+
+          <div class="filterChild">
+            <label class="black-text"><input type="checkbox" id="gluten-free" name="caution" value="Gluten">
+              <span for="gluten-free"> Gluten-Free</span>
+              </input>
+          </div>
+
+          <div class="filterChild">
+            <label class="black-text"><input type="checkbox" id="peanut-free" name="filters" value="Peanut-Free">
+              <span for="peanut-free"> Peanut-Free</span>
+              </input>
+          </div>
+
+          <div class="filterChild">
+            <label class="black-text"><input type="checkbox" id="sugar-concious" name="filters" value="Sugar-Conscious">
+              <span for="sugar-concious"> Sugar-Conscious</span>
+              </input>
+          </div>
+
+          <div class="filterChild">
+            <label class="black-text"><input type="checkbox" id="sulfites-free" name="caution" value="Sulfites">
+              <span for="sulfites-free"> Sulfites-Free</span>
+              </input>
+
+              <div class="filterChild">
+                <label class="black-text">
+                  <label class="black-text"><input type="checkbox" id="vegan" name="filters" value="Vegan">
+                    <span for="vegan"> Vegan</span>
+                    </input>
+                  </label>
+              </div>
+
+              <div class="filterChild">
+                <label class="black-text">
+                  <input type="checkbox" id="vegetarian" name="filters" value="Vegetarian">
+                  <span for="vegetarian"> Vegetarian</span>
+                  </input>
+              </div>
+          </div>
+        </div>
+
+        <label id="foodInput" class="black-text">
+          <input class="col s10 offset-s1 center-align" type="text" id="search-bar" name="input"
+            placeholder="e.g Chicken">
+          <div class="center-align">
+            <button id="submit"
+              class="col s12 l7 offset-l2 center-align waves-effect light-green darken-3 btn-large" type="submit" name="S">
+              Search for recipes
+            </button>
+
+          </div>
+    </aside>
+
+    <div id="recipesDisplayer" class="col s12 m12 l12">
+      <h3 id="gen-recipe-header" class="card-panel light-green darken-3 white-text bold l8">Recipes with selected filters and
+        recommended calorie sum</h3>
+      
+      <div id="recipeDiv">
+        <!-- "Add dynamically recipes -->
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./js/script.js"></script>
+
+</body>
+
+
+
+</html>
