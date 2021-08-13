@@ -139,7 +139,7 @@ button, a:hover {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  button, a {
+  button, #upBtn {
     margin-top: 30px;
     margin-bottom: 30px;
     height: 50px;

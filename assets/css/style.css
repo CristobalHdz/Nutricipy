@@ -93,6 +93,12 @@ img {
   }
 }
 
+@media screen and (max-width: 768px) {
+  #logo{
+    width:80%
+  }
+}
+
 #metric:checked:checked ~ .metric,
 #imperial:checked:checked ~ .imperial,
 #female:checked:checked ~ .female,
