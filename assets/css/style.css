@@ -1,41 +1,39 @@
-*{
-    overflow-x: hidden;
+body {
+  margin: 0;
+  padding: 0;
 }
-
-body{
-    margin: 0;
-    padding: 0;
-  }
-
+#logo{
+  
+  width: 435px;
+  height: 80px;
+}
 .title {
-    background-color: blue;
-    height:400px;
-}
-
-h1 {
-    @media only screen 
-    and (min-device-width: 375px) 
-     and (max-device-width: 812px) 
-    and (-webkit-min-device-pixel-ratio: 3) { 
-      font-size: 15px
-}
+  /* background-image: url("/assets/pic1.jpg") ; */
+  background-image: url("../images/backgroundPic.jpg");
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
 }
 
 .titleChild {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
-p{
-    font-weight: bold;
+p {
+  font-weight: bold;
 }
 
 label {
-    font-size: 20px;
-    color:black;
+  font-size: 20px;
+  color: black;
 }
 
-input{
-    margin-top: 20px;
+input {
+  margin-top: 20px;
+  text-align: center;
+  color: black;
 }
 
 input::-webkit-outer-spin-button,
@@ -44,31 +42,35 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
-button{
-    margin-top: 50px;
+button {
+  margin-top: 50px;
+}
+
+img {
+  width: 25px;
 }
 
 /* RADIO SLIDER */
-.radioBtns{
+.radioBtns {
   margin: 0;
   padding: 0;
 }
 
-.wrapper{
+.wrapper {
   display: inline-flex;
   height: 100px;
   width: 400px;
   justify-content: space-evenly;
   border-radius: 5px;
   padding: 15px;
-  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
- .option{
+.option {
   height: 100%;
   width: 400px;
   display: flex;
@@ -81,23 +83,39 @@ button{
   transition: all 0.3s ease;
 }
 
-#option-1:checked:checked ~ .option-1,
-#option-2:checked:checked ~ .option-2{
-  border-color: #0069d9;
-  background: #0069d9;
+@media screen and (max-width: 425px) {
+  .option {
+    width: 100px;
+    margin: 0;
+  }
+  .wrapper {
+    width: 300px;
+  }
 }
 
-#option-1:checked:checked ~ .option-1 .dot::before,
-#option-2:checked:checked ~ .option-2 .dot::before{
+#metric:checked:checked ~ .metric,
+#imperial:checked:checked ~ .imperial,
+#female:checked:checked ~ .female,
+#male:checked:checked ~ .male {
+  border-color: #aed581;
+  background: #aed581;
+}
+
+#metric:checked:checked ~ .metric,
+#imperial:checked:checked ~ .imperial,
+#female:checked:checked ~ .female,
+#male:checked:checked ~ .male {
   opacity: 1;
   transform: scale(1);
 }
-.wrapper .option span{
+.wrapper .option span {
   font-size: 20px;
   color: #808080;
 }
 
-#option-1:checked:checked ~ .option-1 span,
-#option-2:checked:checked ~ .option-2 span{
+#metric:checked:checked ~ .metric span,
+#imperial:checked:checked ~ .imperial span,
+#female:checked:checked ~ .female span,
+#male:checked:checked ~ .male span {
   color: #fff;
 }

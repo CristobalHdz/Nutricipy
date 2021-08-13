@@ -7,54 +7,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel='icon' href="./assets/images/NutrifyLogo.png">
     <title>Nutricipy</title>
 </head>
 
 <body>
     <section class="row title center-align">
-        <div class=" titleChild col s10 m6 offset-s1 offset-m3 teal white-text">
-            <h1>Nutricipy</h1>
+        <div class=" titleChild col s10 m6 offset-s1 offset-m3 light-green darken-3 white-text">
+            <h1><img  id = "logo"src="assets/images/croped.png" alt="Nutricipy" 
+                ></h1>
         </div>
-        <div class="titleChild col s8 m4 offset-s2 offset-m4 teal white-text">
+        <div class="titleChild col s8 m4 offset-s2 offset-m4 light-green darken-1 white-text">
             <h3>Recipe Finder</h3>
         </div>
     </section>
 
     <section class="row">
-        <div class="col s10 m8 offset-s1 offset-m2 center-align">
-            <p>This application works based on your Body Mass Index(BMI). This is calculated usting your body weight and
-                your height, which ,when calculated, will give you a list of reciped based on the index. You can later
+        <div class="col s10 m8 l8 offset-s1 offset-m2 offset-l2 center-align">
+            <p>This application works based on your Body Mass Index(BMI). This is calculated usting your body weight,
+                your height, age and sex; which ,when calculated, will give you a list of reciped based on the index.
+                You can later
                 add or remove ingredients based on personal preferences or by the allergies you might have</p>
         </div>
-        <div class="col s10 m2 offset-s1 offset-m5 center-align">
-            <label for="weightInput">Enter you current height</label>
-            <input id="weightInput" type="number" id="wightInput" />
-        </div>
-        <div class="col s10 m2 offset-s1 offset-m5 center-align">
-            <label for="weightInput">Enter you current weight</label>
-            <input id="weightInput" type="number"  id="wightInput" />
-        </div>
 
-        <div class="switch col s12 m6 offset-s0 offset-m3 center-align">
+        <form class="switch col s12 m8 l12 offset-s0 offset-m2 center-align" id="measure">
+            <label class="col s12 m8 l12 offset-s0 offset-m2 center-align">Select the measure units:</label>
             <div class="wrapper">
-                <input type="radio" name="select" id="option-1" checked>
-                <input type="radio" name="select" id="option-2">
-                <label for="option-1" class="option option-1">
-                    <div class="dot"></div>
-                    <span>Kg/Meters</span>
+                <input type="radio" name="measure" id="metric" value="metric" checked>
+                <input type="radio" name="measure" id="imperial" value="imperial">
+                <label for="metric" class="option metric">
+                    <span>Kg/cm</span>
                 </label>
-                <label for="option-2" class="option option-2">
-                    <div class="dot"></div>
+                <label for="imperial" class="option imperial">
                     <span>Lb/Feet</span>
                 </label>
             </div>
+        </form>
+
+        <div class="col s10 m6 offset-s1 offset-m3 center-align">
+            <label for="heightInput">Enter your current height</label>
+            <input  type="number" id="heightInput" />
+        </div>
+        <div class="col s10 m6 offset-s1 offset-m3 center-align">
+            <label for="weightInput">Enter your current weight</label>
+            <input  type="number" id="weightInput" />
+        </div>
+        <div class="col s10 m6 offset-s1 offset-m3 center-align">
+            <label for="ageInput">Enter your current age</label>
+            <input  type="number" id="ageInput" />
         </div>
 
+        <form class=" col s12 m8 l12 offset-s0 offset-m2 center-align" id="gender">
+            <label class="col s12 m8 l12 offset-s0 offset-m2 center-align">Please select your gender:</label>
+            <div id = "genderDiv" class="wrapper">
+                <input type="radio" name="gender" id="female" value="female" checked>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="female" class="option female">
+                    <img src="assets/images/FemaleImg.png" alt="Female icon" />
+                    <span>Female</span>
+                </label>
+                <label for="male" class="option male">
+                    <img src="assets/images/MaleImg.png" alt="Male icon" />
+                    <span>Male</span>
+                </label>
+            </div>
+        </form>
+
+
+
+
         </div>
-        <button class="col s8 m4 offset-s3 offset-m4 waves-effect waves-light btn-large" id="calculateBtn">Calculate BMI</button>
+        <button class="col s8 m4 offset-s2 offset-m4 waves-effect light-green darken-3 btn-large"
+            id="calculateBtn">Calculate
+            BMI</button>
     </section>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+   
     <script src="./assets/js/script.js"></script>
 </body>
 
