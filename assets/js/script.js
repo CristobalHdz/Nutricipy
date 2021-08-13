@@ -323,11 +323,9 @@ function showRecipes(recipes) {
 /*
 function processRecipes(recipes, calorie) {
   var vaildRecipes = [];
-
   for (let i = 0; i < recipes.length; i++) {
     //console.log(recipes[i])
     var vaild = true;
-
     for (let j = 0; j < arrayOfFilters.length; j++) {
         console.log(arrayOfFilters[j])
       if (
