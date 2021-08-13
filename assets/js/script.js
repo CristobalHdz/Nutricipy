@@ -2,7 +2,7 @@ var cal = 0;
 
 var arrayOfFilters = [];
 var arrayOfCautions = [];
-var otherHtml = "./secondPage.html";
+var otherHtml = "./assets/secondPage.html";
 
 var calculateBtn = $("#calculateBtn");
 var searchInputBar = $('input[name = "input"]');
@@ -37,21 +37,43 @@ calculateBtn.on("click", function () {
 
   localStorage.setItem("gender", $('input[name="gender"]:checked').val());
   console.log(localStorage.getItem("gender"));
+
+  localStorage.setItem("unit", $('input[name="measure"]:checked').val());
+  console.log(localStorage.getItem("measure"));
+
   updateUserInfo();
   console.log(userInput);
   location.replace(otherHtml);
 });
 
 function updateUserInfo() {
-  userInput.height = parseInt(localStorage.getItem("height"));
-  console.log(userInput.height);
-  userInput.weight = parseInt(localStorage.getItem("weight"));
-  console.log(userInput.weight);
-  userInput.age = parseInt(localStorage.getItem("age"));
-  console.log(userInput.age);
-  userInput.gender = localStorage.getItem("gender");
-  console.log(userInput.gender);
-}
+  var selectedUnit = localStorage.getItem("unit");
+  if (selectedUnit == "metric") {
+    $('input[value="metric"]').prop("checked", true);
+    userInput.height = parseFloat(localStorage.getItem("height"));
+    console.log(userInput.height);
+    userInput.weight = parseFloat(localStorage.getItem("weight"));
+    console.log(userInput.weight);
+    userInput.age = parseInt(localStorage.getItem("age"));
+    console.log(userInput.age);
+    userInput.gender = localStorage.getItem("gender");
+    console.log(userInput.gender);
+    userInput.Unit = localStorage.getItem("Unit");
+    console.log(userInput.Unit);
+  } else if (selectedUnit == "imperial") {
+    $('input[value="imperial"]').prop("checked", true);
+    userInput.height = parseFloat(localStorage.getItem("height"))*30.48;
+    console.log(userInput.height);
+    userInput.weight = parseFloat(localStorage.getItem("weight"))*.454;
+    console.log(userInput.weight);
+    userInput.age = parseInt(localStorage.getItem("age"));
+    console.log(userInput.age);
+    userInput.gender = localStorage.getItem("gender");
+    console.log(userInput.gender);
+    userInput.Unit = localStorage.getItem("Unit");
+    console.log(userInput.Unit);
+  }}
+  
 
 $("#submit").on("click", function () {
   updateUserInfo();
@@ -254,7 +276,7 @@ function showRecipes(recipes) {
     div.addClass("card");
     div.addClass("horizontal");
     var div2 = $("<div>");
-    div2.addClass("card-image col s10 m3");
+    div2.addClass("card-image col s10 m3 l3");
 
     var div3 = $("<div>");
     div3.addClass("card-stacked");
@@ -274,7 +296,7 @@ function showRecipes(recipes) {
     var recipeLink = $("<a>");
     recipeLink.attr("href", recipes[i].recipe.url);
     recipeLink.attr("target", "_blank");
-    recipeLink.text("Link" + recipes[i].recipe.url);
+    recipeLink.text("Show Recipe");
 
     var img = $("<img>");
 

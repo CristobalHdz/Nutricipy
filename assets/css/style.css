@@ -2,7 +2,11 @@ body {
   margin: 0;
   padding: 0;
 }
-
+#logo{
+  
+  width: 435px;
+  height: 80px;
+}
 .title {
   /* background-image: url("/assets/pic1.jpg") ; */
   background-image: url("../images/backgroundPic.jpg");

@@ -1,4 +1,5 @@
 ::placeholder {
+<<<<<<< HEAD
     font-style: italic;
     font-size: 1em;
     color: black;
@@ -108,76 +109,182 @@
       height:50px;
    }
   }
-
-  @media screen and (min-width: 993px) {
-    #menu{
-      padding-bottom: 220px;
-      position:absolute;
-      width:400px;
-    }
-    #filters-btn{
-      margin-bottom: 30px;
-    }
-    #recipesDisplayer .card-panel{
-      margin-left: 400px;
-    }
-    #foodInput input{
-      font-size: 30px;
-    }
-    #foodInput button{
-      margin-top:30px;
-      margin-bottom: 30px;
-    }
-  }
-
-body{
-  background-image: url("../images/ScndBackgroundpic.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+=======
+  font-style: italic;
+  font-size: 1em;
+  color: black;
+  padding: 5px;
 }
+>>>>>>> 8cf281e95d44df730348a0f6d62a3c421c64f30a
 
-#bmi-Category, #calories{
-  border: 2px solid black;
+body {
+ 
+  background-image: url("../images/backgroundPic.jpg");
+  background-image: url("../images/pic2.jpg");
+  background-color: #cccccc; /* Used if the image is unavailable */
+
+  height: 500px;
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#submit{
+  box-shadow: 5px 5px 5px #605f5f;
+  
+}
+#menu {
+  background-color: white;
+ 
+  /*z-index: auto;*/
+}
+#gen-recipe-header {
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
+}
+#bmi-Category,
+#calories {
+  color: white;
+  box-shadow: 5px 5px 5px #c6c5c5;
+}
+#calories {
+  
+  width: 25%;
+  margin: 0 auto;
   border-radius: 5px;
 }
 
 #bmi-Category {
   /* background-color: ;*/
+  
   font-size: 18px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border: 2px solid;
 }
 
 .overWeight {
-  background-color: red;
+  background-color: #f44336;
 }
 .underWeight {
   background-color: darkkhaki;
 }
 .normalWeight {
-  background-color: greenyellow;
+  background-color: #ffa726;
 }
 
 #bmi-box {
-  /* background-color: ;*/
   font-size: 25px;
-  font-weight: bold;
   padding: 10px 20px;
-  border: solid;
+  box-shadow: 5px 5px 5px #c6c5c5;
 }
 
 #bmi-text {
   font-size: 18px;
 }
 
-#filters-btn{
+#filters-btn {
+  border: 2px black;
+
+  white-space: nowrap;
+}
+
+#foodInput input {
+  font-style: italic;
+}
+
+@media screen and (max-width: 425px) {
+  #calculatedBoxes {
+    font-size: 30px;
+  }
+  #filters-btn label span {
+    font-size: 30px;
+  }
+  #filters-btn {
+    line-height: 57px;
+  }
+  #search-bar {
+    font-size: 30px;
+    height: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 50px;
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 426px) and (max-width: 992px) {
+  #calculatedBoxes {
+    font-size: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #filters-btn label span {
+    font-size: 40px;
+  }
+  #filters-btn {
+    line-height: 65px;
+  }
+  #filters h3 {
+    margin-bottom: 40px;
+  }
+  #search-bar {
+    font-size: 30px;
+    height: 35px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 50px;
+  }
+}
+
+@media screen and (min-width: 993px) {
+  #menu {
+    padding-bottom: 720px;
+    position: absolute;
+    width: 400px;
+  }
+  #filters-btn {
+    margin-bottom: 30px;
+  }
+  #recipesDisplayer .card-panel {
+    margin-left: 400px;
+  }
+  #foodInput input {
+    font-size: 30px;
+  }
+  #foodInput button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+#bmi-Category,
+#calories {
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+#bmi-Category {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+#bmi-text {
+  font-size: 18px;
+}
+
+#filters-btn {
   border: 2px black;
 }
 
-#divContainer {
-  /* background-color: springgreen; */
-}
 #filter-btn {
   width: 60%;
   margin: 0 auto;
@@ -187,90 +294,138 @@ body{
 #search-bar {
   margin-top: 30px;
 }
-#submit-btn button {
-  /* background-color: purple ;*/
-}
+
 
 #foodInput input {
   font-style: italic;
-
 }
 
 @media screen and (max-width: 425px) {
   #calculatedBoxes {
     font-size: 30px;
   }
-  #filters-btn label span  {
+  #filters-btn label span {
     font-size: 30px;
   }
   #filters-btn {
     line-height: 57px;
   }
-  #search-bar{
-    font-size:30px;
-    height:35px;
-    margin-top:30px;
-    margin-bottom:30px;
+  #search-bar {
+    font-size: 30px;
+    height: 35px;
+    margin-top: 30px;
+    margin-bottom: 30px;
   }
-  button{
-    margin-top:30px;
-    margin-bottom:30px;
-    height:50px;
+  button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 50px;
     font-size: 60px;
- }
+  }
+  .row .col {
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 426px) and (max-width: 992px) {
   #calculatedBoxes {
     font-size: 30px;
-    margin-top:10px;
+    margin-top: 10px;
     margin-bottom: 10px;
   }
-  #filters-btn label span  {
+  #filters-btn label span {
     font-size: 40px;
   }
   #filters-btn {
     line-height: 65px;
   }
-  #filters h3{
+  #filters h3 {
     margin-bottom: 40px;
   }
-  #search-bar{
-    font-size:30px;
-    height:35px;
-    margin-top:20px;
-    margin-bottom:10px;
+  #search-bar {
+    font-size: 30px;
+    height: 35px;
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
-  button{
-    margin-top:30px;
-    margin-bottom:30px;
-    height:50px;
- }
+  button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 50px;
+  }
+  .row .col {
+    padding: 0;
+  }
 }
 
 @media screen and (min-width: 993px) {
-  #menu{
+  #menu {
     padding-bottom: 220px;
-    position:absolute;
-    width:400px;
+    position: fixed;
+    top: 0;
+    width: 550px;
   }
-  #filters-btn{
+  #filters-btn {
     margin-bottom: 30px;
   }
-  #recipesDisplayer .card-panel{
+  .filterChild {
+    margin-bottom: 15px;
+  }
+  #filters-btn label span {
+    font-size: 25px;
+  }
+  #recipesDisplayer .card-panel {
     margin-left: 400px;
   }
-  #foodInput input{
+  #foodInput input {
     font-size: 30px;
   }
-  #foodInput button{
-    margin-top:30px;
+  #foodInput button {
+    margin-top: 30px;
     margin-bottom: 30px;
   }
+  #recipeDiv {
+    margin-left: 575px;
+  }
 }
+
+.card-image {
+  position: relative;
+  width: 20%;
+}
+
+.card-image img {
+  position: absolute;
+  top: 0;
+  min-width: 50%;
+  height: 50%;
+  object-fit: cover;
+  margin-right: 0;
+}
+
+.card-stacked {
+  width: 80%;
+}
+
 button:hover {
   letter-spacing: 1px;
 }
+
 .card-image {
   margin: auto 0;
+}
+
+@media screen and (min-width: 1000px) {
+  #gen-recipe-header {
+    position: relative;
+    left: 84px;
+  }
+  #menu {
+    padding-bottom: 720px;
+    position: absolute;
+    width: 495px;
+  }
+  #recipeDiv {
+    margin-left: 567px;
+  }
 }
