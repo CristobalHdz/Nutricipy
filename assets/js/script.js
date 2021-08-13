@@ -43,15 +43,33 @@ calculateBtn.on("click", function () {
 });
 
 function updateUserInfo() {
-  userInput.height = parseInt(localStorage.getItem("height"));
-  console.log(userInput.height);
-  userInput.weight = parseInt(localStorage.getItem("weight"));
-  console.log(userInput.weight);
-  userInput.age = parseInt(localStorage.getItem("age"));
-  console.log(userInput.age);
-  userInput.gender = localStorage.getItem("gender");
-  console.log(userInput.gender);
-}
+  var selectedUnit = localStorage.getItem("unit");
+  if (selectedUnit == "metric") {
+    $('input[value="metric"]').prop("checked", true);
+    userInput.height = parseFloat(localStorage.getItem("height"));
+    console.log(userInput.height);
+    userInput.weight = parseFloat(localStorage.getItem("weight"));
+    console.log(userInput.weight);
+    userInput.age = parseInt(localStorage.getItem("age"));
+    console.log(userInput.age);
+    userInput.gender = localStorage.getItem("gender");
+    console.log(userInput.gender);
+    userInput.Unit = localStorage.getItem("Unit");
+    console.log(userInput.Unit);
+  } else if (selectedUnit == "imperial") {
+    $('input[value="imperial"]').prop("checked", true);
+    userInput.height = parseFloat(localStorage.getItem("height"))*30.48;
+    console.log(userInput.height);
+    userInput.weight = parseFloat(localStorage.getItem("weight"))*.454;
+    console.log(userInput.weight);
+    userInput.age = parseInt(localStorage.getItem("age"));
+    console.log(userInput.age);
+    userInput.gender = localStorage.getItem("gender");
+    console.log(userInput.gender);
+    userInput.Unit = localStorage.getItem("Unit");
+    console.log(userInput.Unit);
+  }}
+  console.log(selectedUnit);
 
 $("#submit").on("click", function () {
   updateUserInfo();
